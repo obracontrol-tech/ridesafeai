@@ -165,6 +165,14 @@ footer a:hover{color:var(--txt)}
   .logo{font-size:19px}
   .btn{width:100%}.cta{flex-direction:column}
 }
+
+/* Fondo grupeta en la portada */
+.hero-cyclists-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/portada-grupeta.jpg) 100% 42%/118% auto no-repeat;opacity:.72}
+.hero-cyclists-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(14,26,43,.88) 22%,rgba(14,26,43,.45) 42%,rgba(14,26,43,.25) 70%,rgba(14,26,43,.45) 100%),linear-gradient(180deg,rgba(14,26,43,.85) 0%,transparent 20%,transparent 72%,var(--bg) 100%)}
+.hero .wrap{z-index:2}
+.hero:before,.hero .bike{z-index:1}
+@media(max-width:1100px){.hero-cyclists-bg{background-size:cover;background-position:62% 50%}}
+@media(max-width:900px){.hero-cyclists-bg{background-image:url(img/portada-grupeta-movil.jpg);background-size:auto 62%;background-position:68% 38%;opacity:.6}.hero-cyclists-bg:after{background:linear-gradient(180deg,rgba(14,26,43,.7) 0%,rgba(14,26,43,.55) 30%,rgba(14,26,43,.8) 55%,var(--bg) 66%)}}
 </style>
 </head>
 <body>
@@ -186,6 +194,7 @@ footer a:hover{color:var(--txt)}
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
+  <div class="hero-cyclists-bg" aria-hidden="true"></div>
   <svg class="bike" viewBox="0 0 24 24" fill="none" stroke="#C8DC3C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h3"/></svg>
   <div class="wrap">
     <div>
