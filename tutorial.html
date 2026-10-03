@@ -2,403 +2,404 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>RideSafe AI — Manual de Usuario</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideSafe IA — Manual de usuario</title>
+<meta name="description" content="Guía paso a paso de RideSafe IA: instalar la app, planificar rutas, salidas en grupo, aviso de caída y seguridad. Gratis.">
+<meta name="theme-color" content="#0E1A2B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500;600;700&display=swap">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#060a07;--bg2:#0a0f0b;--card:#0f1810;--card2:#141f15;
-  --lime:#a8e63d;--lime-dim:rgba(168,230,61,.1);--lime-glow:rgba(168,230,61,.2);
-  --text:#e8f0e9;--muted:#7a9a7e;--dim:#3a4a3e;
-  --border:rgba(168,230,61,.12);--border2:rgba(168,230,61,.06);
-  --red:#ff3355;--orange:#ff8833;--cyan:#00e5ff;
+  --bg:#0B1626;--bg2:#0E1A2B;--card:#13233A;--card2:#1C2F4A;
+  --lime:#C8DC3C;--lime-dim:rgba(200,220,60,.10);--lime-glow:rgba(200,220,60,.25);
+  --text:#EEF3F8;--muted:#9FB0C4;--dim:#3a4a5e;
+  --border:rgba(200,220,60,.18);--border2:rgba(255,255,255,.07);
+  --red:#EF4444;--orange:#F97316;--green:#22C55E;
 }
+html{scroll-behavior:smooth}
 html,body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--lime)}
 
-/* HEADER */
-.hdr{background:linear-gradient(135deg,#0a0f0b,#0d1a0e);border-bottom:2px solid rgba(168,230,61,.2);padding:16px 20px;position:sticky;top:0;z-index:100}
-.hdr-logo{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;line-height:1}
+/* CABECERA */
+.top{position:sticky;top:0;z-index:100}
+.hdr{background:linear-gradient(135deg,#0E1A2B,#13233A);border-bottom:2px solid var(--border);padding:12px 16px;display:flex;align-items:center;gap:12px}
+.hdr img{width:36px;height:36px;border-radius:10px}
+.hdr-logo{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;line-height:1}
 .hdr-logo span{color:var(--lime)}
 .hdr-sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.hdr-btn{margin-left:auto;background:var(--lime);color:#0E1A2B;font-weight:800;font-size:13px;padding:9px 14px;border-radius:20px;text-decoration:none;white-space:nowrap}
 
-/* NAV INDICE */
-.indice{padding:16px 20px;background:var(--card);border-bottom:1px solid var(--border2);overflow-x:auto;display:flex;gap:8px;white-space:nowrap}
-.ind-btn{padding:6px 14px;background:none;border:1px solid var(--border2);border-radius:20px;color:var(--muted);font-size:11px;font-weight:600;cursor:pointer;font-family:'Barlow',sans-serif;transition:all .2s;text-decoration:none;display:inline-block}
+/* ÍNDICE */
+.indice{padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--border2);overflow-x:auto;display:flex;gap:8px;white-space:nowrap;scrollbar-width:none}
+.indice::-webkit-scrollbar{display:none}
+.ind-btn{padding:7px 14px;border:1px solid var(--border2);border-radius:20px;color:var(--muted);font-size:12px;font-weight:700;text-decoration:none;display:inline-block;transition:all .2s}
 .ind-btn:hover,.ind-btn.on{background:var(--lime-dim);border-color:var(--lime);color:var(--lime)}
 
 /* CONTENIDO */
-.contenido{padding:20px;max-width:680px;margin:0 auto}
-
-/* SECCIONES */
-.seccion{margin-bottom:40px;scroll-margin-top:80px}
-.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid rgba(168,230,61,.2)}
+.contenido{padding:20px 16px;max-width:720px;margin:0 auto}
+.intro{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px 18px;margin-bottom:28px;font-size:14.5px;line-height:1.6}
+.intro b{color:var(--lime)}
+.seccion{margin-bottom:40px;scroll-margin-top:130px}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--border)}
 .sec-icon{font-size:28px;flex-shrink:0}
-.sec-titulo{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--text);letter-spacing:.5px}
+.sec-titulo{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;letter-spacing:.3px}
 .sec-titulo span{color:var(--lime)}
+.nuevo{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:800;font-family:'Barlow',sans-serif;background:var(--lime);color:#0E1A2B;vertical-align:middle;letter-spacing:.3px}
+.txt{font-size:14px;color:var(--muted);margin-bottom:12px;line-height:1.6}
+.subtit{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--lime);margin:18px 0 8px}
 
 /* PASOS */
-.pasos{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.pasos{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
 .paso{display:flex;gap:12px;align-items:flex-start}
-.paso-num{width:28px;height:28px;border-radius:50%;background:var(--lime);color:#080c0a;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.paso-txt{flex:1;padding:8px 12px;background:var(--card);border:1px solid var(--border2);border-radius:12px;font-size:13px;line-height:1.5}
-.paso-titulo{font-weight:700;color:var(--lime);font-size:12px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.paso-num{width:30px;height:30px;border-radius:50%;background:var(--lime);color:#0E1A2B;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.paso-txt{flex:1;padding:10px 13px;background:var(--card);border:1px solid var(--border2);border-radius:12px;font-size:14px;line-height:1.5}
+.paso-titulo{font-weight:800;color:var(--lime);font-size:12.5px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
 
-/* CAJA INFO */
-.caja{padding:14px 16px;border-left:4px solid var(--lime);background:var(--lime-dim);border-radius:0 12px 12px 0;margin:12px 0;font-size:13px;line-height:1.6;color:var(--text)}
-.caja-aviso{padding:14px 16px;border-left:4px solid var(--orange);background:rgba(255,136,51,.08);border-radius:0 12px 12px 0;margin:12px 0;font-size:13px;line-height:1.6;color:var(--text)}
+/* CAJAS */
+.caja,.caja-aviso,.caja-roja{padding:13px 16px;border-radius:0 12px 12px 0;margin:12px 0;font-size:14px;line-height:1.6}
+.caja{border-left:4px solid var(--lime);background:var(--lime-dim)}
+.caja-aviso{border-left:4px solid var(--orange);background:rgba(249,115,22,.09)}
+.caja-roja{border-left:4px solid var(--red);background:rgba(239,68,68,.10)}
 
-/* BULLETS */
-.bullets{display:flex;flex-direction:column;gap:6px;margin:10px 0}
-.bli{display:flex;gap:10px;font-size:13px;line-height:1.5}
-.bli::before{content:"•";color:var(--lime);font-size:18px;line-height:1.2;flex-shrink:0}
+/* LISTAS */
+.bullets{display:flex;flex-direction:column;gap:7px;margin:10px 0}
+.bli{display:flex;gap:10px;font-size:14px;line-height:1.5}
+.bli::before{content:"•";color:var(--lime);font-size:18px;line-height:1.15;flex-shrink:0}
 
-/* SUBTITULO */
-.subtit{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--lime);margin:16px 0 8px;letter-spacing:.3px}
+/* SEMÁFORO */
+.semaforo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.sem{border-radius:12px;padding:10px;text-align:center;font-size:13px;font-weight:700;border:1px solid var(--border2);background:var(--card)}
+.sem i{display:block;width:22px;height:22px;border-radius:50%;margin:0 auto 6px}
 
-/* TABLA MODULOS */
-.tabla-mod{width:100%;border-collapse:collapse;margin:8px 0}
-.tabla-mod th{background:var(--card2);padding:8px 12px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;text-align:left;border-bottom:1px solid var(--border)}
-.tabla-mod td{padding:10px 12px;font-size:13px;border-bottom:1px solid var(--border2)}
-.tabla-mod tr:last-child td{border-bottom:none}
-.tabla-mod tr:hover td{background:var(--card)}
-.mod-ico{font-size:18px;text-align:center}
-.mod-nom{color:var(--lime);font-weight:700}
+/* TABLA */
+.tabla-mod{width:100%;border-collapse:collapse;margin:8px 0;background:var(--card);border-radius:14px;overflow:hidden}
+.tabla-mod th{background:var(--card2);padding:9px 12px;font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;text-align:left}
+.tabla-mod td{padding:10px 12px;font-size:14px;border-top:1px solid var(--border2);vertical-align:top}
+.mod-ico{font-size:20px;text-align:center;width:40px}
+.mod-nom{color:var(--lime);font-weight:800;white-space:nowrap}
 .mod-des{color:var(--muted)}
 
-/* BADGE NIVEL */
-.nivel-badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.3px}
-.nivel-novato{background:rgba(0,229,100,.1);color:#00e564;border:1px solid rgba(0,229,100,.2)}
-.nivel-medio{background:rgba(255,200,0,.1);color:#ffc800;border:1px solid rgba(255,200,0,.2)}
-.nivel-pro{background:rgba(255,51,85,.1);color:#ff3355;border:1px solid rgba(255,51,85,.2)}
+/* PREGUNTAS */
+details.faq{background:var(--card);border:1px solid var(--border2);border-radius:12px;margin-bottom:8px}
+details.faq summary{cursor:pointer;padding:12px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;gap:10px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";margin-left:auto;color:var(--lime);font-size:20px;font-weight:800}
+details.faq[open] summary::after{content:"−"}
+details.faq p{padding:0 14px 13px;font-size:14px;line-height:1.6;color:var(--muted)}
 
-/* FOOTER */
-.footer{text-align:center;padding:32px 20px;border-top:1px solid var(--border2);margin-top:40px}
+/* PIE */
+.footer{text-align:center;padding:32px 20px 90px;border-top:1px solid var(--border2);margin-top:30px}
 .footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;margin-bottom:8px}
 .footer-logo span{color:var(--lime)}
-.footer-txt{font-size:12px;color:var(--muted);line-height:2}
-
-/* SCROLL TOP */
-.scroll-top{position:fixed;bottom:24px;right:20px;width:40px;height:40px;border-radius:50%;background:var(--lime);color:#080c0a;border:none;font-size:18px;cursor:pointer;box-shadow:0 4px 16px var(--lime-glow);display:none;align-items:center;justify-content:center;z-index:200}
+.footer-txt{font-size:13px;color:var(--muted);line-height:2}
+.scroll-top{position:fixed;bottom:22px;right:18px;width:44px;height:44px;border-radius:50%;background:var(--lime);color:#0E1A2B;border:none;font-size:20px;font-weight:900;cursor:pointer;box-shadow:0 4px 16px var(--lime-glow);display:none;align-items:center;justify-content:center;z-index:200}
 .scroll-top.show{display:flex}
 </style>
 </head>
 <body>
 
+<div class="top">
 <div class="hdr">
-  <div class="hdr-logo">Ride<span>Safe</span> AI</div>
-  <div class="hdr-sub">Manual de Usuario · Guia completa paso a paso</div>
+  <img src="https://app.ridesafeia.es/icons/icon-192.png" alt="">
+  <div>
+    <div class="hdr-logo">RideSafe <span>IA</span></div>
+    <div class="hdr-sub">Manual de usuario</div>
+  </div>
+  <a class="hdr-btn" href="https://app.ridesafeia.es">Abrir la app</a>
 </div>
 
-<div class="indice">
+<nav class="indice" aria-label="Índice">
   <a class="ind-btn" href="#instalacion">📲 Instalar</a>
-  <a class="ind-btn" href="#perfil">👤 Perfil</a>
-  <a class="ind-btn" href="#clave">🔑 Clave</a>
-  <a class="ind-btn" href="#telegram">📱 Telegram</a>
-  <a class="ind-btn" href="#radar">📡 Radar</a>
-  <a class="ind-btn" href="#grupo">👥 Grupo</a>
-  <a class="ind-btn" href="#navegacion">🗺️ GPS</a>
-  <a class="ind-btn" href="#seguridad">🛡️ SOS</a>
-  <a class="ind-btn" href="#asistente">🤖 IA</a>
-  <a class="ind-btn" href="#ebike">⚡ E-Bike</a>
-  <a class="ind-btn" href="#modulos">📋 Todos</a>
+  <a class="ind-btn" href="#perfil">👤 Cuenta</a>
+  <a class="ind-btn" href="#clave">🆓 Gratis</a>
+  <a class="ind-btn" href="#pantalla">🧭 La app</a>
+  <a class="ind-btn" href="#rutas">🗺️ Rutas</a>
+  <a class="ind-btn" href="#navegacion">▲ Navegar</a>
+  <a class="ind-btn" href="#grupo">👥 Salidas</a>
+  <a class="ind-btn" href="#radar">🚴 Club</a>
+  <a class="ind-btn" href="#seguridad">🆘 Seguridad</a>
+  <a class="ind-btn" href="#actividades">📊 Actividades</a>
+  <a class="ind-btn" href="#ajustes">⚙️ Perfil</a>
+  <a class="ind-btn" href="#asistente">💬 Ayuda</a>
+  <a class="ind-btn" href="#modulos">📋 Resumen</a>
+</nav>
 </div>
 
-<div class="contenido">
+<main class="contenido">
 
-  <!-- ══════ INSTALACION ══════ -->
-  <div class="seccion" id="instalacion">
-    <div class="sec-hdr">
-      <span class="sec-icon">📲</span>
-      <div class="sec-titulo">Instalacion de la <span>app</span></div>
-    </div>
-
-    <div class="subtit">En Android (Chrome)</div>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir Chrome</div>En tu movil Android abre el navegador Chrome</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Ir a la URL</div>Escribe en la barra: <strong style="color:var(--lime)">tinyurl.com/ridesafeIA</strong> y pulsa Enter</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Menu</div>Pulsa los tres puntos ⋮ arriba a la derecha</div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Añadir a inicio</div>Selecciona "Añadir a pantalla de inicio"</div></div>
-      <div class="paso"><div class="paso-num">5</div><div class="paso-txt"><div class="paso-titulo">Confirmar</div>Pulsa Añadir — aparecera el icono del escudo verde en tu pantalla</div></div>
-      <div class="paso"><div class="paso-num">6</div><div class="paso-txt"><div class="paso-titulo">Abrir siempre desde el icono</div>Desde el icono la app abre en pantalla completa sin barra del navegador</div></div>
-    </div>
-
-    <div class="subtit">En iPhone (Safari)</div>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir Safari</div>En tu iPhone abre Safari y ve a tinyurl.com/ridesafeIA</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Compartir</div>Pulsa el icono de compartir (cuadrado con flecha arriba)</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Añadir a inicio</div>Selecciona "Añadir a pantalla de inicio" → Añadir</div></div>
-    </div>
-
-    <div class="caja-aviso">⚠️ Abre siempre la app desde el icono del escudo verde — no desde el navegador — para tener la experiencia completa en pantalla completa.</div>
+  <div class="intro">
+    <b>RideSafe IA</b> es la capa de seguridad inteligente para ciclistas. Te ayuda a planificar rutas seguras, salir en grupo con tu club y avisar si te pasa algo en la carretera. <b>Es gratis</b> y funciona en Android, iPhone y ordenador, sin pasar por ninguna tienda de apps.
   </div>
 
-  <!-- ══════ PERFIL ══════ -->
-  <div class="seccion" id="perfil">
-    <div class="sec-hdr">
-      <span class="sec-icon">👤</span>
-      <div class="sec-titulo">Primer arranque — <span>tu perfil</span></div>
-    </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">La primera vez que abres RideSafe AI configuras tu perfil ciclista. Este perfil es lo que ven otros ciclistas cuando el Radar te detecta.</p>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Prueba gratuita</div>Veras los dias de prueba restantes. Pulsa ENTRAR A RIDESAFE AI</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Tu nombre</div>Escribe el nombre que veran otros ciclistas (ej: JM, Pedro, Maria)</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Tu bicicleta</div>Selecciona: <strong>Carretera, MTB, Gravel o E-Bike</strong></div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Tu nivel</div>
-        <span class="nivel-badge nivel-novato">Novato</span> menos de 20 km/h &nbsp;
-        <span class="nivel-badge nivel-medio">Medio</span> 20-28 km/h &nbsp;
-        <span class="nivel-badge nivel-pro">Pro</span> mas de 28 km/h
-      </div></div>
-      <div class="paso"><div class="paso-num">5</div><div class="paso-txt"><div class="paso-titulo">Guardar</div>Pulsa ¡EMPEZAR A PEDALEAR! — ya estas dentro</div></div>
-    </div>
-    <div class="caja">El nivel se ajusta automaticamente cuando grabas 3 o mas rutas. La app calcula tu velocidad media y actualiza tu nivel sin que hagas nada.</div>
-  </div>
+  <!-- ══════ INSTALAR ══════ -->
+  <section class="seccion" id="instalacion">
+    <div class="sec-hdr"><span class="sec-icon">📲</span><h2 class="sec-titulo">Instalar la <span>app</span></h2></div>
 
-  <!-- ══════ CLAVE ══════ -->
-  <div class="seccion" id="clave">
-    <div class="sec-hdr">
-      <span class="sec-icon">🔑</span>
-      <div class="sec-titulo">Activar tu <span>clave</span></div>
-    </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Cuando finalice el periodo de prueba necesitas introducir tu clave de activacion para seguir usando RideSafe AI.</p>
+    <h3 class="subtit">En Android (Chrome)</h3>
     <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Pantalla de activacion</div>Aparece automaticamente cuando expira la prueba</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Obtener clave</div>Contacta por WhatsApp al <strong style="color:var(--lime)">+34 643 223 301</strong></div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Introducir clave</div>Escribe la clave (ej: RIDE-PRO-01) y pulsa ACTIVAR</div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Activado</div>La app queda activada permanentemente en ese dispositivo</div></div>
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abre la web</div>En Chrome entra en <strong style="color:var(--lime)">app.ridesafeia.es</strong></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Menú</div>Pulsa los tres puntos <b>⋮</b> de arriba a la derecha</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Instalar</div>Elige <b>«Instalar aplicación»</b> o <b>«Añadir a pantalla de inicio»</b> y confirma</div></div>
+      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Listo</div>Aparece el icono de RideSafe IA en tu móvil. Ábrela siempre desde ahí</div></div>
     </div>
-    <div class="caja-aviso">⚠️ Cada clave es de uso unico y queda vinculada al dispositivo. Si cambias de movil necesitas una nueva clave.</div>
-  </div>
 
-  <!-- ══════ TELEGRAM ══════ -->
-  <div class="seccion" id="telegram">
-    <div class="sec-hdr">
-      <span class="sec-icon">📱</span>
-      <div class="sec-titulo">Alertas <span>Telegram</span></div>
-    </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Configura Telegram para recibir alertas de seguridad en tiempo real: actividad, SOS, caidas y ciclistas cercanos.</p>
-    <div class="subtit">Paso 1 — Obtener tu Chat ID</div>
+    <h3 class="subtit">En iPhone (Safari)</h3>
     <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir Telegram</div>Busca <strong style="color:var(--lime)">@rindesafeai_bot</strong> y pulsa START</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Obtener ID</div>Abre en el navegador: <strong style="color:var(--lime);font-size:11px">api.telegram.org/bot[token]/getUpdates</strong></div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Copiar ID</div>Busca el numero despues de "id": — ese es tu Chat ID</div></div>
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abre la web</div>En Safari entra en <b>app.ridesafeia.es</b></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Compartir</div>Pulsa el icono de compartir (cuadrado con flecha hacia arriba)</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Añadir</div>Elige <b>«Añadir a pantalla de inicio»</b> → Añadir</div></div>
     </div>
-    <div class="subtit">Paso 2 — Configurar en la app</div>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Icono Telegram</div>Pulsa el icono azul de Telegram en el header de la app</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Introducir Chat ID</div>Escribe tu Chat ID en el campo correspondiente</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Guardar</div>Pulsa GUARDAR Y ACTIVAR — recibiras un mensaje de confirmacion</div></div>
-    </div>
-    <div class="caja">Unete al canal oficial <strong>@RideSafeAI</strong> en Telegram para recibir noticias y encontrar otros ciclistas.</div>
-  </div>
 
-  <!-- ══════ RADAR ══════ -->
-  <div class="seccion" id="radar">
-    <div class="sec-hdr">
-      <span class="sec-icon">📡</span>
-      <div class="sec-titulo">Radar de ciclistas <span>cercanos</span></div>
+    <h3 class="subtit">En el ordenador (Chrome o Edge)</h3>
+    <div class="pasos">
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abre la web</div>Entra en <b>app.ridesafeia.es</b></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Instalar</div>Pulsa el icono de instalar de la barra de direcciones (a la derecha) → <b>Instalar</b></div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Entra con tu cuenta</div>Usa la misma cuenta que en el móvil. Ideal para que los jefes de grupeta creen salidas y planifiquen rutas cómodamente</div></div>
     </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">El Radar es la funcion estrella de RideSafe AI. Detecta otros usuarios en un radio de 2 km en tiempo real.</p>
+    <div class="caja">💡 Las actualizaciones llegan solas. Si algún día no ves una novedad, cierra la app del todo y vuelve a abrirla.</div>
+  </section>
+
+  <!-- ══════ CUENTA ══════ -->
+  <section class="seccion" id="perfil">
+    <div class="sec-hdr"><span class="sec-icon">👤</span><h2 class="sec-titulo">Tu <span>cuenta</span></h2></div>
+    <div class="pasos">
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Tu nombre</div>En <b>Perfil</b> escribe el nombre que verán los demás ciclistas y pulsa <b>Guardar</b></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Guarda tu cuenta con Google</div>En <b>Perfil</b> pulsa <b>«Guardar mi cuenta con Google»</b>. Así no pierdes tus salidas, rutas ni logros si cambias de móvil</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Únete a tu club</div>En <b>Comunidad → Mi club</b> pulsa <b>«Unirme a mi club»</b> con el código o el enlace que te pase tu club</div></div>
+    </div>
+  </section>
+
+  <!-- ══════ GRATIS (antes «clave») ══════ -->
+  <section class="seccion" id="clave">
+    <div class="sec-hdr"><span class="sec-icon">🆓</span><h2 class="sec-titulo">Gratis, <span>sin clave</span></h2></div>
+    <div class="caja">✅ <b>RideSafe IA ya es totalmente gratuita.</b> No hay periodo de prueba ni hace falta ninguna clave de activación. Es un proyecto altruista: <b>tu seguridad es lo primero</b>.</div>
+    <p class="txt">Si alguna vez te aparece una pantalla antigua pidiendo una clave, cierra la app del todo y vuelve a abrirla para cargar la versión nueva.</p>
+  </section>
+
+  <!-- ══════ LA APP ══════ -->
+  <section class="seccion" id="pantalla">
+    <div class="sec-hdr"><span class="sec-icon">🧭</span><h2 class="sec-titulo">Cómo es <span>la app</span></h2></div>
+    <p class="txt">Abajo tienes siempre la barra con los cinco apartados. Puedes cambiar de uno a otro en cualquier momento, incluso mientras planificas una ruta, sin perder nada.</p>
+    <table class="tabla-mod">
+      <tr><th></th><th>Apartado</th><th>Para qué sirve</th></tr>
+      <tr><td class="mod-ico">🗺️</td><td class="mod-nom">Rutas</td><td class="mod-des">Mapa, planificar rutas, ir a un destino y grabar tu salida</td></tr>
+      <tr><td class="mod-ico">👥</td><td class="mod-nom">Comunidad</td><td class="mod-des">Próximas salidas, tu club, puntos ciclistas y alertas de seguridad</td></tr>
+      <tr><td class="mod-ico">➕</td><td class="mod-nom">Crear</td><td class="mod-des">Crear salida, nueva ruta o subir un archivo GPX/TCX</td></tr>
+      <tr><td class="mod-ico">📊</td><td class="mod-nom">Actividades</td><td class="mod-des">Tu historial, estadísticas y logros</td></tr>
+      <tr><td class="mod-ico">👤</td><td class="mod-nom">Perfil</td><td class="mod-des">Tu cuenta, tu bici, mapas sin conexión y ayuda</td></tr>
+    </table>
+  </section>
+
+  <!-- ══════ RUTAS ══════ -->
+  <section class="seccion" id="rutas">
+    <div class="sec-hdr"><span class="sec-icon">🗺️</span><h2 class="sec-titulo">Planificar <span>rutas</span></h2></div>
+
+    <h3 class="subtit">Crear una ruta</h3>
+    <div class="pasos">
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Planificar</div>En <b>Rutas</b> pulsa <b>Planificar</b> y elige: <b>De A a B</b>, <b>Por etapas</b> o <b>Ruta circular</b></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Tipo de bici</div><b>🚴 Carretera</b>: solo asfalto, sin autovías. <b>🚵 Montaña</b>: caminos y pistas</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Marca los puntos</div>Busca el sitio o toca el mapa. En las circulares elige los km (20 a 100) y pulsa <b>«Otra vuelta»</b> para ver otra opción</div></div>
+      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Revisa</div>Verás km, subida, bajada, tiempo y el <b>perfil</b> coloreado: 🟢 llano · 🟠 más del 7% · 🔴 más del 12%</div></div>
+      <div class="paso"><div class="paso-num">5</div><div class="paso-txt"><div class="paso-titulo">Usa la ruta</div><b>▲ Iniciar</b> para navegar, <b>💾 Guardar</b>, <b>📅 Crear salida</b> con ella o <b>⬇️ Descargar GPX</b> para tu Garmin o Wahoo</div></div>
+    </div>
+
+    <h3 class="subtit">🧭 Ir a un destino <span class="nuevo">NUEVO</span></h3>
+    <p class="txt">En <b>Rutas</b> pulsa <b>«Ir a un destino»</b>, escribe el sitio y elígelo. La app calcula la ruta en bici desde donde estás, lista para pulsar ▲ Iniciar.</p>
+
+    <h3 class="subtit">🚦 Semáforo de la ruta <span class="nuevo">NUEVO</span></h3>
+    <p class="txt">Debajo del perfil aparece una nota de 0 a 100 que te dice si es buen momento para salir. Valora las pendientes, el tiempo de ahora (viento, lluvia, tormenta, niebla, calor y frío) y si terminarías de noche.</p>
+    <div class="semaforo">
+      <div class="sem"><i style="background:var(--green)"></i>75–100<br>Buenas condiciones</div>
+      <div class="sem"><i style="background:#F59E0B"></i>50–74<br>Con precaución</div>
+      <div class="sem"><i style="background:var(--red)"></i>0–49<br>Mejor otro momento</div>
+    </div>
+
+    <h3 class="subtit">☕ Paradas en la ruta <span class="nuevo">NUEVO</span></h3>
+    <p class="txt">Pulsa <b>«Ver paradas en la ruta»</b> y verás lo que hay a menos de 300 m del recorrido, ordenado por kilómetro:</p>
     <div class="bullets">
-      <div class="bli">La app publica tu posicion GPS cada 30 segundos automaticamente</div>
-      <div class="bli">Cada 45 segundos escanea ciclistas activos en 2 km a tu alrededor</div>
-      <div class="bli">Si detecta ciclistas aparece una tarjeta emergente con su informacion</div>
-      <div class="bli">Muestra: nombre, nivel, tipo de bici y distancia exacta</div>
-      <div class="bli">Ciclistas inactivos mas de 5 minutos no se muestran</div>
+      <div class="bli">💧 Fuentes · ☕ Bares · 💊 Farmacias · 🔧 Talleres · 🛒 Tiendas</div>
+      <div class="bli">⭐ Puntos ciclistas de tu comunidad y ⚠️ peligros avisados</div>
+      <div class="bli">Aviso si hay 25 km o más sin agua ni sitios para comprar</div>
+      <div class="bli">Si guardas la ruta, las paradas se guardan con ella para verlas sin cobertura</div>
     </div>
-    <div class="subtit">Botones de la tarjeta emergente</div>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">→</div><div class="paso-txt"><div class="paso-titulo">UNIRSE AL GRUPO</div>Si el ciclista tiene grupo activo — te unes automaticamente con un toque</div></div>
-      <div class="paso"><div class="paso-num">→</div><div class="paso-txt"><div class="paso-titulo">CREAR GRUPO JUNTOS</div>Si va solo — crea un grupo nuevo para pedalear coordinados</div></div>
-      <div class="paso"><div class="paso-num">→</div><div class="paso-txt"><div class="paso-titulo">Ignorar</div>Cierra la tarjeta — ese ciclista no aparece durante 10 minutos</div></div>
-    </div>
-    <div class="caja-aviso">⚠️ El Radar necesita GPS activo y conexion a internet. Activa ambos antes de salir.</div>
-  </div>
 
-  <!-- ══════ GRUPO ══════ -->
-  <div class="seccion" id="grupo">
-    <div class="sec-hdr">
-      <span class="sec-icon">👥</span>
-      <div class="sec-titulo">Modo <span>Grupo</span></div>
-    </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Coordina hasta 10 ciclistas en tiempo real con sincronizacion Firebase.</p>
-    <div class="subtit">Crear un grupo</div>
+    <h3 class="subtit">🌬️ Planificar con el viento</h3>
+    <p class="txt">Al crear una salida puedes consultar el viento por horas. La app te aconseja en qué sentido hacer la ruta: salir con el viento de cara y volver con él a favor.</p>
+  </section>
+
+  <!-- ══════ NAVEGAR Y GRABAR ══════ -->
+  <section class="seccion" id="navegacion">
+    <div class="sec-hdr"><span class="sec-icon">▲</span><h2 class="sec-titulo">Navegar y <span>grabar</span></h2></div>
     <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir modulo GRUPO</div>Pulsa el modulo Grupo en la pantalla principal</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Tu nombre</div>Escribe como aparecer en el grupo</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Crear grupo</div>Pulsa CREAR GRUPO — obtienes un codigo unico (ej: XK7F2B)</div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Compartir codigo</div>Comparte el codigo con los otros ciclistas por WhatsApp</div></div>
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Empezar</div>Pulsa <b>▲ Iniciar</b> en una ruta, o <b>Rec · INICIAR</b> en Rutas para grabar sin ruta</div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Voz</div>Te guía con <b>voz clara</b> en cada giro. Activa o quita la voz con 🔊. Si te desvías, recalcula sola</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Pantalla</div>La pantalla se queda encendida. Con <b>🌙 Modo ahorro</b> se pone negra y sigue grabando</div></div>
+      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Terminar</div>Pulsa <b>⏸ Pausa</b> si paras y <b>⏹ Terminar</b> al acabar. Se guarda en Actividades</div></div>
     </div>
-    <div class="subtit">Unirse a un grupo</div>
+    <div class="caja">🗺️ <b>Mapas sin conexión:</b> en Perfil → Mapas sin conexión puedes guardar una zona para usar el mapa en la montaña sin cobertura.</div>
+    <div class="caja-aviso">🔊 ¿No oyes la voz? Toca la pantalla una vez al abrir la app y sube el volumen <b>multimedia</b> del móvil (no el del timbre).</div>
+  </section>
+
+  <!-- ══════ SALIDAS EN GRUPO ══════ -->
+  <section class="seccion" id="grupo">
+    <div class="sec-hdr"><span class="sec-icon">👥</span><h2 class="sec-titulo">Salidas en <span>grupo</span></h2></div>
+
+    <h3 class="subtit">Crear una salida</h3>
     <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir modulo GRUPO</div>Pulsa el modulo Grupo</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Introducir codigo</div>Escribe el codigo que te han compartido</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Unirse</div>Pulsa UNIRSE AL GRUPO — entras si hay sitio libre (maximo 10)</div></div>
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Botón ＋</div>Pulsa el botón verde <b>＋</b> → <b>Crear salida</b></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Día y hora</div>Elige el día y la hora en formato 24 h (hay botones rápidos 08:00 · 08:30 · 09:00)</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Puntos</div>Marca el punto de salida y el de encuentro en el mapa o con «Estoy aquí»</div></div>
+      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Detalles (opcional)</div>Ruta, parada prevista (café, desayuno…), viento, tipo, ritmo, plazas y una nota</div></div>
+      <div class="paso"><div class="paso-num">5</div><div class="paso-txt"><div class="paso-titulo">Compartir</div>Envíala por <b>WhatsApp</b> con una tarjeta visual. Los demás pulsan <b>«Me apunto»</b></div></div>
     </div>
-    <div class="caja">El grupo persiste aunque cierres la app. Al volver a abrirla te reconectas automaticamente al mismo grupo.</div>
-    <div class="subtit">Sala de voz</div>
+
+    <h3 class="subtit">🛰️ Pelotón en vivo</h3>
+    <p class="txt">El día de la salida pulsa <b>«Empezar salida»</b>. Todos los apuntados os veis en el mapa y la app avisa si alguien se queda descolgado.</p>
     <div class="bullets">
-      <div class="bli">Pulsa ABRIR SALA DE VOZ dentro del grupo activo</div>
-      <div class="bli">Se abre Telegram con el Voice Chat del canal @RideSafeAI</div>
-      <div class="bli">El microfono empieza silenciado — pulsa Activar para hablar</div>
-      <div class="bli">Pulsa Altavoz para escuchar por el altavoz del movil</div>
+      <div class="bli">Botones de aviso al grupo con sirena: <b>🔧 Pinchazo · ✋ Esperad · 🆘 Ayuda</b></div>
+      <div class="bli">En <b>➕ Más</b>: avería, caída, me quedo atrás y avisos del jefe de ruta</div>
+      <div class="bli"><b>✅ Solucionado, seguimos</b> para avisar de que todo está bien</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══════ NAVEGACION ══════ -->
-  <div class="seccion" id="navegacion">
-    <div class="sec-hdr">
-      <span class="sec-icon">🗺️</span>
-      <div class="sec-titulo">Navegacion <span>GPS</span></div>
+  <!-- ══════ CLUB ══════ -->
+  <section class="seccion" id="radar">
+    <div class="sec-hdr"><span class="sec-icon">🚴</span><h2 class="sec-titulo">Tu <span>club</span></h2></div>
+    <p class="txt">Cada club es un espacio privado: solo sus miembros ven sus salidas, rutas, ranking y ciclistas.</p>
+    <div class="bullets">
+      <div class="bli"><b>Mi club:</b> únete con el código o crea el tuyo. Los <b>jefes de pelotón</b> gestionan las salidas de su club</div>
+      <div class="bli"><b>📡 Ciclistas del club cerca:</b> quién de tu club rueda a menos de 2 km (actívalo en Perfil)</div>
+      <div class="bli"><b>Rutas del club</b> compartidas, <b>actividad</b> y <b>ranking</b></div>
+      <div class="bli"><b>☕ Puntos ciclistas:</b> mapa colaborativo de fuentes, cafés, talleres, miradores, aseos y peligros</div>
+      <div class="bli"><b>🔔 Avisos:</b> recibe una notificación cuando tu grupo crea una salida o ruta nueva</div>
     </div>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Iniciar</div>Pulsa el modulo NAVEGACION o el boton INICIAR ACTIVIDAD</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">GPS activo</div>El badge GPS verde en el header confirma que el GPS esta activo</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Grabar ruta</div>Pulsa REC (circulo rojo) para iniciar la grabacion de la ruta</div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Finalizar</div>Pulsa STOP para terminar — la ruta se guarda automaticamente en el historial</div></div>
-    </div>
-    <div class="subtit">Planificar rutas</div>
-    <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir PLANIFICAR</div>Pulsa el modulo Planificar en el grid</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Origen y destino</div>Pulsa en el mapa para marcar inicio y fin de la ruta</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Perfil</div>Elige: Carretera, MTB o Senderismo</div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Calcular</div>Pulsa CALCULAR RUTA — aparece con distancia y desnivel</div></div>
-    </div>
-  </div>
+  </section>
 
   <!-- ══════ SEGURIDAD ══════ -->
-  <div class="seccion" id="seguridad">
-    <div class="sec-hdr">
-      <span class="sec-icon">🛡️</span>
-      <div class="sec-titulo">Seguridad y <span>emergencias</span></div>
-    </div>
-    <div class="subtit">Configurar contactos de emergencia</div>
+  <section class="seccion" id="seguridad">
+    <div class="sec-hdr"><span class="sec-icon">🆘</span><h2 class="sec-titulo">Seguridad y <span>emergencias</span></h2></div>
+    <div class="caja-roja">🚨 En una emergencia llama siempre al <b>112</b>. RideSafe IA te ayuda, pero no sustituye a los servicios de emergencia.</div>
+
+    <h3 class="subtit">Alertas de seguridad</h3>
+    <p class="txt">En <b>Comunidad → Alertas de seguridad</b> (o el botón SOS mientras grabas): <b>📞 Llamar al 112</b> y <b>📍 Enviar tu ubicación por WhatsApp</b>.</p>
+
+    <h3 class="subtit">Contacto de emergencia</h3>
     <div class="pasos">
-      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir SEGURIDAD</div>Pulsa el modulo Seguridad</div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Añadir contacto</div>Pulsa el boton + Añadir contacto de emergencia</div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Datos</div>Escribe nombre y telefono con prefijo (+34 600 123 456)</div></div>
-      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Guardar</div>Puedes añadir hasta 3 contactos personales</div></div>
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Abrir</div>Ve a <b>Alertas de seguridad</b></div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Datos</div>Escribe el nombre y el teléfono de tu contacto</div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Guardar</div>Pulsa <b>💾 Guardar</b></div></div>
     </div>
-    <div class="subtit">Boton SOS</div>
-    <div class="bullets">
-      <div class="bli">Pulsa el boton SOS rojo en Seguridad o en la barra de navegacion</div>
-      <div class="bli">Confirma la alerta en el dialogo</div>
-      <div class="bli">Se envia tu ubicacion GPS exacta por Telegram y WhatsApp a todos tus contactos</div>
-      <div class="bli">El enlace de Google Maps muestra donde estas exactamente</div>
-    </div>
-    <div class="subtit">Detector de caidas</div>
-    <div class="bullets">
-      <div class="bli">El acelerometro detecta impactos bruscos automaticamente</div>
-      <div class="bli">Aparece una cuenta atras de 10 segundos</div>
-      <div class="bli">Si estas bien pulsa CANCELAR antes de que llegue a 0</div>
-      <div class="bli">Si no cancelas se envia la alerta automaticamente</div>
-    </div>
-    <div class="subtit">Flash de emergencia</div>
-    <div class="bullets">
-      <div class="bli">En Seguridad activa el toggle del Flash</div>
-      <div class="bli">Elige patron: Lento, Rapido o Morse SOS</div>
-      <div class="bli">Visible a mas de 500 metros</div>
-      <div class="bli">Se apaga automaticamente al cerrar el panel</div>
-    </div>
-  </div>
 
-  <!-- ══════ ASISTENTE IA ══════ -->
-  <div class="seccion" id="asistente">
-    <div class="sec-hdr">
-      <span class="sec-icon">🤖</span>
-      <div class="sec-titulo">Asistente <span>IA</span></div>
+    <h3 class="subtit">🚑 Aviso automático de caída <span class="nuevo">NUEVO</span></h3>
+    <p class="txt">Funciona mientras grabas una salida, con la app abierta.</p>
+    <div class="pasos">
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Detecta</div>Un golpe fuerte yendo a más de 8 km/h y después te quedas quieto unos 15 segundos</div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Pregunta</div>Sale <b>«¿Estás bien?»</b> con alarma, voz y una cuenta atrás de <b>30 segundos</b></div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Si estás bien</div>Pulsa <b>✅ Estoy bien</b> y no pasa nada</div></div>
+      <div class="paso"><div class="paso-num">4</div><div class="paso-txt"><div class="paso-titulo">Si no respondes</div>Avisa a tu <b>grupo</b> y a tu <b>familia</b>, y la pantalla muestra <b>📞 112</b> y el aviso a tu contacto por WhatsApp para quien te encuentre</div></div>
     </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Asistente especializado en ciclismo. Pregunta por voz o texto sobre rutas, mecanica, nutricion y emergencias.</p>
     <div class="bullets">
-      <div class="bli">Pulsa el modulo ASISTENTE IA</div>
-      <div class="bli">Escribe tu pregunta o pulsa el microfono para hablar</div>
-      <div class="bli">Responde en segundos con informacion precisa y contextualizada</div>
+      <div class="bli"><b>Sensibilidad:</b> Baja (montaña), Normal (recomendada) o Alta</div>
+      <div class="bli"><b>🧪 Ver pantalla</b> y <b>📳 Probar el sensor de verdad</b> para comprobarlo sin moverte</div>
     </div>
-    <div class="subtit">Ejemplos de preguntas</div>
-    <div class="bullets">
-      <div class="bli">Como mejorar mi resistencia en subidas?</div>
-      <div class="bli">Que hago si se me pincha en medio de la montaña?</div>
-      <div class="bli">Sugiereme una ruta de MTB de 30 km cerca de Lleida</div>
-      <div class="bli">Que debo comer antes de una ruta larga?</div>
-      <div class="bli">Cuanto dura una bateria de E-Bike de 500 Wh?</div>
-    </div>
-  </div>
+    <div class="caja-aviso">⚠️ Si lo pruebas parado en ruta no saltará: está hecho así para evitar falsas alarmas (por ejemplo, si se te cae el móvil en el bar). Usa el botón de prueba del sensor.</div>
 
-  <!-- ══════ E-BIKE ══════ -->
-  <div class="seccion" id="ebike">
-    <div class="sec-hdr">
-      <span class="sec-icon">⚡</span>
-      <div class="sec-titulo">E-Bike <span>Pro</span></div>
+    <h3 class="subtit">👨‍👩‍👧 Ubicación para la familia</h3>
+    <div class="pasos">
+      <div class="paso"><div class="paso-num">1</div><div class="paso-txt"><div class="paso-titulo">Compartir</div>Pulsa <b>📍 Ubicación para la familia</b> (o 📡 mientras grabas) y elige 1, 3 u 8 horas</div></div>
+      <div class="paso"><div class="paso-num">2</div><div class="paso-txt"><div class="paso-titulo">Enviar</div>Mándales el enlace por WhatsApp. Lo abren <b>sin instalar nada</b></div></div>
+      <div class="paso"><div class="paso-num">3</div><div class="paso-txt"><div class="paso-titulo">Alarma <span class="nuevo">NUEVO</span></div>Tu familiar pulsa una vez <b>«🔔 Activar alarma sonora»</b>. Si sufres una caída, en su pantalla sale una alerta roja con alarma, tu posición y el botón del 112</div></div>
     </div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6">Panel especializado para bicicletas electricas.</p>
-    <div class="subtit">Panel de bateria</div>
-    <div class="bullets">
-      <div class="bli">Ajusta el slider al nivel actual de carga (0-100%)</div>
-      <div class="bli">Indica los Wh totales de tu bateria</div>
-      <div class="bli">Introduce los ciclos de carga para calcular la salud</div>
-      <div class="bli">La app calcula automaticamente la autonomia restante en km</div>
-    </div>
-    <div class="subtit">Diagnostico IA del motor</div>
-    <div class="bullets">
-      <div class="bli">Pulsa cualquier sintoma predefinido (Ruido, Perdida potencia...)</div>
-      <div class="bli">O escribe tu problema en el campo de texto libre</div>
-      <div class="bli">La IA analiza y da diagnostico con causas y soluciones</div>
-    </div>
-  </div>
+    <div class="caja" id="telegram">ℹ️ <b>Ya no hace falta Telegram.</b> Todos los avisos funcionan con la propia app, WhatsApp y el 112.</div>
+  </section>
 
-  <!-- ══════ TODOS LOS MODULOS ══════ -->
-  <div class="seccion" id="modulos">
-    <div class="sec-hdr">
-      <span class="sec-icon">📋</span>
-      <div class="sec-titulo">Todos los <span>modulos</span></div>
+  <!-- ══════ ACTIVIDADES ══════ -->
+  <section class="seccion" id="actividades">
+    <div class="sec-hdr"><span class="sec-icon">📊</span><h2 class="sec-titulo">Tus <span>actividades</span></h2></div>
+    <div class="bullets">
+      <div class="bli"><b>Historial</b> de salidas con resumen del mes y de los últimos 6 meses</div>
+      <div class="bli"><b>🎖️ Logros y medallas</b>, como «Rey de la montaña» (1.000 m de desnivel en una salida)</div>
+      <div class="bli"><b>Foto con tus datos:</b> imagen para redes con tu recorrido y estadísticas (Historia, Publicación o Cuadrada)</div>
+      <div class="bli"><b>Strava:</b> conecta tu cuenta y las salidas de tu reloj llegan solas</div>
+      <div class="bli"><b>⬆️ Subir:</b> importa un archivo GPX o TCX de tu reloj o ciclocomputador</div>
     </div>
+  </section>
+
+  <!-- ══════ PERFIL ══════ -->
+  <section class="seccion" id="ajustes">
+    <div class="sec-hdr"><span class="sec-icon">⚙️</span><h2 class="sec-titulo">Tu <span>perfil</span></h2></div>
+    <div class="bullets">
+      <div class="bli"><b>🚲 Mi bici:</b> kilómetros y mantenimiento de tu bicicleta</div>
+      <div class="bli"><b>🗺️ Mapas sin conexión:</b> guarda zonas para usarlas sin cobertura</div>
+      <div class="bli"><b>Avisos en mi Garmin o reloj:</b> modelos compatibles y botón de prueba</div>
+      <div class="bli"><b>📜 Código ético del ciclista</b> y <b>📣 Invitar a amigos</b></div>
+      <div class="bli"><b>Privacidad</b> y <b>Borrar mi cuenta y mis datos</b> cuando quieras</div>
+    </div>
+  </section>
+
+  <!-- ══════ AYUDA ══════ -->
+  <section class="seccion" id="asistente">
+    <div class="sec-hdr"><span class="sec-icon">💬</span><h2 class="sec-titulo">Ayuda y <span>consultas</span></h2></div>
+    <p class="txt">En <b>Perfil → Consultas e incidencias</b> escribe tu duda. Mientras escribes, el <b>asistente</b> te muestra la respuesta que encaja. Si no se resuelve, envíanos el mensaje por <b>WhatsApp</b> o correo con un toque.</p>
+
+    <h3 class="subtit">Preguntas frecuentes</h3>
+    <details class="faq"><summary>🔄 No veo las novedades de la app</summary><p>Cierra la app del todo (quítala de las apps recientes) y vuelve a abrirla. Si sigue igual, abre en el navegador app.ridesafeia.es/?v=2.</p></details>
+    <details class="faq"><summary>🚦 El semáforo tarda en salir</summary><p>Necesita unos segundos para consultar el tiempo. Como mucho en 12 segundos da su nota. Si no hay conexión, valora solo el terreno y lo indica.</p></details>
+    <details class="faq"><summary>🔊 No oigo la voz de la navegación</summary><p>Toca la pantalla una vez después de abrir la app, comprueba que la voz está en 🔊 y sube el volumen multimedia del móvil.</p></details>
+    <details class="faq"><summary>📍 El GPS no me sitúa bien</summary><p>Activa la ubicación en alta precisión y da permiso de ubicación al navegador. Al aire libre funciona mucho mejor que dentro de casa.</p></details>
+    <details class="faq"><summary>🚑 El aviso de caída no salta al probarlo</summary><p>En ruta solo salta si ibas a más de 8 km/h antes del golpe y luego te quedas quieto. Para probarlo parado usa «📳 Probar el sensor de verdad» en Alertas de seguridad.</p></details>
+    <details class="faq"><summary>🔒 ¿Cómo no pierdo mis datos al cambiar de móvil?</summary><p>En Perfil pulsa «Guardar mi cuenta con Google» y entra con la misma cuenta en el móvil nuevo.</p></details>
+  </section>
+
+  <!-- ══════ RESUMEN ══════ -->
+  <section class="seccion" id="modulos">
+    <div class="sec-hdr"><span class="sec-icon">📋</span><h2 class="sec-titulo">Todo de un <span>vistazo</span></h2></div>
     <table class="tabla-mod">
-      <tr><th></th><th>Modulo</th><th>Para que sirve</th></tr>
-      <tr><td class="mod-ico">📡</td><td class="mod-nom">Radar</td><td class="mod-des">Detecta ciclistas a 2 km en tiempo real</td></tr>
-      <tr><td class="mod-ico">👥</td><td class="mod-nom">Grupo</td><td class="mod-des">Grupos de hasta 10 ciclistas con codigo</td></tr>
-      <tr><td class="mod-ico">🎙️</td><td class="mod-nom">Sala de Voz</td><td class="mod-des">Voz en tiempo real por Telegram</td></tr>
-      <tr><td class="mod-ico">🗺️</td><td class="mod-nom">Navegacion GPS</td><td class="mod-des">Mapas off-road y grabacion de rutas</td></tr>
-      <tr><td class="mod-ico">📋</td><td class="mod-nom">Planificar</td><td class="mod-des">Calcula rutas con distancia y desnivel</td></tr>
-      <tr><td class="mod-ico">🛡️</td><td class="mod-nom">Seguridad</td><td class="mod-des">SOS, caidas, flash y contactos emergencia</td></tr>
-      <tr><td class="mod-ico">🤖</td><td class="mod-nom">Asistente IA</td><td class="mod-des">Preguntas por voz sobre ciclismo</td></tr>
-      <tr><td class="mod-ico">⚡</td><td class="mod-nom">E-Bike Pro</td><td class="mod-des">Bateria, autonomia y diagnostico IA</td></tr>
-      <tr><td class="mod-ico">📊</td><td class="mod-nom">Analisis</td><td class="mod-des">Estadisticas, records y graficas</td></tr>
-      <tr><td class="mod-ico">⚙️</td><td class="mod-nom">Ajustes</td><td class="mod-des">Perfil, nombre, bici y nivel</td></tr>
-      <tr><td class="mod-ico">📱</td><td class="mod-nom">Telegram</td><td class="mod-des">Alertas personales en tiempo real</td></tr>
+      <tr><th></th><th>Función</th><th>Para qué sirve</th></tr>
+      <tr><td class="mod-ico">🗺️</td><td class="mod-nom">Planificar</td><td class="mod-des">Rutas A-B, por etapas o circulares, carretera o montaña</td></tr>
+      <tr><td class="mod-ico">🚦</td><td class="mod-nom">Semáforo</td><td class="mod-des">Nota de seguridad de la ruta según terreno, tiempo y luz</td></tr>
+      <tr><td class="mod-ico">☕</td><td class="mod-nom">Paradas</td><td class="mod-des">Fuentes, bares, farmacias y talleres en tu ruta</td></tr>
+      <tr><td class="mod-ico">▲</td><td class="mod-nom">Navegar</td><td class="mod-des">Guía por voz giro a giro y recálculo automático</td></tr>
+      <tr><td class="mod-ico">⏺️</td><td class="mod-nom">Grabar</td><td class="mod-des">Km, tiempo, velocidad y desnivel en directo</td></tr>
+      <tr><td class="mod-ico">👥</td><td class="mod-nom">Salidas</td><td class="mod-des">Organiza salidas y compártelas por WhatsApp</td></tr>
+      <tr><td class="mod-ico">🛰️</td><td class="mod-nom">Pelotón en vivo</td><td class="mod-des">Todo el grupo en el mapa y avisos con sirena</td></tr>
+      <tr><td class="mod-ico">🚴</td><td class="mod-nom">Mi club</td><td class="mod-des">Club privado con jefes, rutas, ranking y ciclistas cerca</td></tr>
+      <tr><td class="mod-ico">🚑</td><td class="mod-nom">Aviso de caída</td><td class="mod-des">Detecta caídas y avisa al grupo y a la familia</td></tr>
+      <tr><td class="mod-ico">👨‍👩‍👧</td><td class="mod-nom">Familia</td><td class="mod-des">Te siguen en directo con un enlace, sin instalar nada</td></tr>
+      <tr><td class="mod-ico">🆘</td><td class="mod-nom">Alertas</td><td class="mod-des">112, ubicación por WhatsApp y contacto de emergencia</td></tr>
+      <tr><td class="mod-ico">📊</td><td class="mod-nom">Actividades</td><td class="mod-des">Historial, logros, foto para redes y Strava</td></tr>
+      <tr><td class="mod-ico">💬</td><td class="mod-nom">Consultas</td><td class="mod-des">Asistente de ayuda y contacto por WhatsApp</td></tr>
     </table>
-  </div>
+  </section>
 
-</div>
+</main>
 
-<div class="footer">
-  <div class="footer-logo">Ride<span>Safe</span> AI</div>
+<footer class="footer">
+  <div class="footer-logo">RideSafe <span>IA</span></div>
   <div class="footer-txt">
-    JM Prestige AI Solutions · Lleida<br>
-    info@obracontrolgps.net · +34 643 223 301<br>
-    <strong style="color:var(--lime)">tinyurl.com/ridesafeIA</strong> · @RideSafeAI
+    Gratis · Tu seguridad, lo primero<br>
+    <a href="https://app.ridesafeia.es">app.ridesafeia.es</a> · <a href="mailto:info@ridesafeia.es">info@ridesafeia.es</a><br>
+    WhatsApp <a href="https://wa.me/34643223301">+34 643 223 301</a><br>
+    En emergencias llama siempre al <b style="color:var(--text)">112</b>
   </div>
-</div>
+</footer>
 
-<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
 
 <script>
-window.addEventListener('scroll', function() {
-  document.getElementById('scroll-top').classList.toggle('show', window.scrollY > 300);
-});
-
-// Indice activo segun scroll
-var secciones = document.querySelectorAll('.seccion');
-var btns = document.querySelectorAll('.ind-btn');
-window.addEventListener('scroll', function() {
-  var actual = '';
-  secciones.forEach(function(s) {
-    if (window.scrollY >= s.offsetTop - 100) actual = s.id;
+var secciones=document.querySelectorAll('.seccion');
+var btns=document.querySelectorAll('.ind-btn');
+window.addEventListener('scroll',function(){
+  document.getElementById('scroll-top').classList.toggle('show',window.scrollY>300);
+  var actual='';
+  secciones.forEach(function(s){if(window.scrollY>=s.offsetTop-140)actual=s.id});
+  btns.forEach(function(b){
+    var on=b.getAttribute('href')==='#'+actual;
+    if(on&&!b.classList.contains('on')){var n=b.parentNode;n.scrollLeft=b.offsetLeft-n.clientWidth/2+b.clientWidth/2}
+    b.classList.toggle('on',on);
   });
-  btns.forEach(function(b) {
-    b.classList.toggle('on', b.getAttribute('href') === '#' + actual);
-  });
-});
+},{passive:true});
 </script>
 </body>
 </html>
