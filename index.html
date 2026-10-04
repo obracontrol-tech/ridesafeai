@@ -75,6 +75,7 @@ h3{font-size:20px;font-weight:800;line-height:1.25}
 .f .e{font-size:30px;line-height:1;margin-bottom:12px}
 .f h3{font-size:17px}
 .f p{color:var(--txt2);font-size:14.5px;margin-top:6px}
+.gprev{display:flex;gap:18px;justify-content:center}.gprev a{flex:0 1 280px;max-width:280px;width:44%}.gprev img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
 .new{display:inline-block;background:var(--lime);color:var(--on-lime);font-size:10.5px;font-weight:800;border-radius:8px;padding:2px 7px;margin-left:6px;vertical-align:middle;letter-spacing:.04em}
 /* Bloques con pantallas */
 .show{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:96px}
@@ -184,6 +185,7 @@ footer a:hover{color:var(--txt)}
     <a href="#clubes" data-ca="Clubs">Clubes</a>
     <a href="#seguridad" data-ca="Seguretat">Seguridad</a>
     <a href="#garmin">Garmin</a>
+    <a href="#guia" data-ca="Guia">Guía</a>
     <a href="#instalar" data-ca="Instal·lar">Instalar</a>
     <a href="#contacto" data-ca="Contacte">Contacto</a>
   </div>
@@ -241,13 +243,19 @@ footer a:hover{color:var(--txt)}
       <div class="f rv"><div class="e">🌬️</div><h3 data-ca="Vent previst">Viento previsto</h3><p data-ca="Hora a hora, amb consell: anada amb vent en contra, tornada a favor.">Hora a hora, con consejo: ida con viento en contra, vuelta a favor.</p></div>
       <div class="f rv"><div class="e">🛰️</div><h3 data-ca="Pilot en directe">Pelotón en vivo</h3><p data-ca="Tot el grup al mapa i avís si algú es queda a més d'1 km.">Todo el grupo en el mapa y aviso si alguien se queda a más de 1 km.</p></div>
       <div class="f rv"><div class="e">🔧</div><h3 data-ca="Avisos al pilot">Avisos al pelotón</h3><p data-ca="Punxada, avaria, espereu, caiguda, ajuda… amb sirena, veu i notificació.">Pinchazo, avería, esperad, caída, ayuda… con sirena, voz y notificación.</p></div>
-      <div class="f rv"><div class="e">⌚</div><h3 data-ca="Al teu Garmin">En tu Garmin <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="Els avisos apareixen també a la pantalla dels Garmin compatibles.">Los avisos aparecen también en la pantalla de los Garmin compatibles.</p></div>
+      <div class="f rv"><div class="e">⌚</div><h3 data-ca="Al teu Garmin">En tu Garmin</h3><p data-ca="Els avisos apareixen també a la pantalla dels Garmin compatibles.">Los avisos aparecen también en la pantalla de los Garmin compatibles.</p></div>
       <div class="f rv"><div class="e">🗺️</div><h3 data-ca="Rutes a mida">Rutas a medida</h3><p data-ca="Carretera només per asfalt; muntanya per camins i pistes. Toca el mapa per passar per on vulguis.">Carretera solo por asfalto; montaña por caminos y pistas. Toca el mapa para pasar por donde quieras.</p></div>
       <div class="f rv"><div class="e">🧭</div><h3 data-ca="Com arribar">Cómo llegar</h3><p data-ca="Guia dins de l'app fins al punt de trobada, amb indicacions i veu.">Guía dentro de la app hasta el punto de encuentro, con indicaciones y voz.</p></div>
       <div class="f rv"><div class="e">📍</div><h3 data-ca="Ubicació per a la família">Ubicación para la familia</h3><p data-ca="Un enllaç per WhatsApp i et veuen al mapa. Ells no instal·len res.">Un enlace por WhatsApp y te ven en el mapa. Ellos no instalan nada.</p></div>
       <div class="f rv"><div class="e">🌙</div><h3 data-ca="Mode estalvi">Modo ahorro</h3><p data-ca="Pantalla negra per estalviar bateria mentre el GPS segueix gravant.">Pantalla negra para ahorrar batería mientras el GPS sigue grabando.</p></div>
       <div class="f rv"><div class="e">📸</div><h3 data-ca="Targeta per a xarxes">Tarjeta para redes</h3><p data-ca="La teva sortida amb foto, recorregut i dades, llesta per a Instagram, Facebook o WhatsApp.">Tu salida con foto, recorrido y datos, lista para Instagram, Facebook o WhatsApp.</p></div>
       <div class="f rv"><div class="e">🏆</div><h3 data-ca="Rànquing del club">Ranking del club</h3><p data-ca="Quilòmetres del club i de cada grupeta, privat per a cada club.">Kilómetros del club y de cada grupeta, privado para cada club.</p></div>
+      <div class="f rv"><div class="e">🚴</div><h3 data-ca="Atrapa el teu grup <span class=&quot;new&quot; data-ca=&quot;NOU&quot;>NUEVO</span>">Alcanza tu grupo <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="Arribes tard? Et diu on i quan unir-te a la teva grupeta i t'hi porta amb veu.">¿Llegas tarde? Te dice dónde y cuándo unirte a tu grupeta y te lleva con voz.</p></div>
+      <div class="f rv"><div class="e">✏️</div><h3 data-ca="Dibuixa la teva ruta <span class=&quot;new&quot; data-ca=&quot;NOU&quot;>NUEVO</span>">Dibuja tu ruta <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="Toca el mapa i la ruta segueix la carretera. Desa-la o passa-la en GPX al Garmin.">Toca el mapa y la ruta se pega a la carretera. Guárdala o pásala en GPX al Garmin.</p></div>
+      <div class="f rv"><div class="e">🚦</div><h3 data-ca="Semàfor de la ruta <span class=&quot;new&quot; data-ca=&quot;NOU&quot;>NUEVO</span>">Semáforo de la ruta <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="Nota de seguretat de la ruta amb vent i desnivell, i fonts, bars i farmàcies pel camí.">Nota de seguridad de la ruta con viento y desnivel, y fuentes, bares y farmacias en el camino.</p></div>
+      <div class="f rv"><div class="e">🧭</div><h3 data-ca="Brúixola <span class=&quot;new&quot; data-ca=&quot;NOU&quot;>NUEVO</span>">Brújula <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="El nord sempre a la vista i, amb un toc, et diu cap on vas.">El norte siempre a la vista y, con un toque, te dice hacia dónde vas.</p></div>
+      <div class="f rv"><div class="e">🏔️</div><h3 data-ca="Recorregut en 3D <span class=&quot;new&quot; data-ca=&quot;NOU&quot;>NUEVO</span>">Recorrido en 3D <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="Reviu la teva sortida sobre satèl·lit en relleu, amb la línia de color segons l'alçada.">Revive tu salida sobre satélite en relieve, con la línea de color según la altura.</p></div>
+      <div class="f rv"><div class="e">💬</div><h3 data-ca="Consultes i incidències <span class=&quot;new&quot; data-ca=&quot;NOU&quot;>NUEVO</span>">Consultas e incidencias <span class="new" data-ca="NOU">NUEVO</span></h3><p data-ca="Pregunta un dubte o avisa d'una errada des de l'app, per WhatsApp o correu.">Pregunta una duda o avisa de un fallo desde la app, por WhatsApp o correo.</p></div>
     </div>
   </div>
 </section>
@@ -394,6 +402,15 @@ footer a:hover{color:var(--txt)}
         <li data-ca="Per als avisos cal iOS 16.4 o superior">Para los avisos hace falta iOS 16.4 o superior</li></ol></div>
       <div class="qr rv"><img src="img/qr.png" alt="Código QR de app.ridesafeia.es" width="170" height="170"><span style="margin-top:8px">app.ridesafeia.es</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ============ GUÍA ============ -->
+<section id="guia" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head center rv"><span class="eyebrow" data-ca="Guia d'ús">Guía de uso</span><h2 data-ca="Tota l'app <em>pas a pas</em>">Toda la app <em>paso a paso</em></h2><p class="lead" data-ca="30 targetes amb captures: per a què serveix cada apartat i com es fa servir. Per llegir al mòbil o imprimir per al club.">30 tarjetas con capturas: para qué sirve cada apartado y cómo se usa. Para leer en el móvil o imprimir para el club.</p></div>
+    <div class="gprev rv"><a href="guia/" target="_blank" rel="noopener"><img src="img/guia-p1.jpg" alt="Portada de la guía con tarjetas" width="910" height="1287" loading="lazy"></a><a href="guia/" target="_blank" rel="noopener"><img src="img/guia-p2.jpg" alt="Ejemplo de tarjeta de la guía" width="910" height="1287" loading="lazy"></a></div>
+    <div class="cta rv" style="justify-content:center;margin-top:24px"><a class="btn lime" href="guia/" target="_blank" rel="noopener" data-ca="📖 Veure la guia">📖 Ver la guía</a><a class="btn ghost" href="guia/RideSafeIA_Guia_v4.6.pdf" download data-ca="⬇ Descarregar PDF per imprimir">⬇ Descargar PDF para imprimir</a></div>
   </div>
 </section>
 
