@@ -107,6 +107,8 @@ h3{font-size:20px;font-weight:800;line-height:1.25}
 .media{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
 .video{width:100%;max-width:360px;justify-self:center;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000}
 .video video{width:100%;display:block}
+.gvid{max-width:880px;margin:0 auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 20px 50px rgba(0,0,0,.45)}.gvid video{width:100%;display:block;aspect-ratio:16/9}
+.gvl{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}.gvl span{background:var(--card,#16263D);border:1px solid var(--line);border-radius:20px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--txt2)}
 .pod{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
 .pod audio{width:100%;margin-top:12px;accent-color:var(--lime)}
 .pod p{color:var(--txt2);font-size:14.5px;margin-top:6px}
@@ -185,6 +187,7 @@ footer a:hover{color:var(--txt)}
     <a href="#clubes" data-ca="Clubs">Clubes</a>
     <a href="#seguridad" data-ca="Seguretat">Seguridad</a>
     <a href="#garmin">Garmin</a>
+    <a href="#guia-video" data-ca="Vídeo">Vídeo</a>
     <a href="#guia" data-ca="Guia">Guía</a>
     <a href="#instalar" data-ca="Instal·lar">Instalar</a>
     <a href="#contacto" data-ca="Contacte">Contacto</a>
@@ -402,6 +405,15 @@ footer a:hover{color:var(--txt)}
         <li data-ca="Per als avisos cal iOS 16.4 o superior">Para los avisos hace falta iOS 16.4 o superior</li></ol></div>
       <div class="qr rv"><img src="img/qr.png" alt="Código QR de app.ridesafeia.es" width="170" height="170"><span style="margin-top:8px">app.ridesafeia.es</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ============ GUÍA EN VÍDEO ============ -->
+<section id="guia-video" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head center rv"><span class="eyebrow" data-ca="Vídeo · 8 minuts">Vídeo · 8 minutos</span><h2 data-ca="Tota l'app <em>en vídeo</em>">Toda la app <em>en vídeo</em></h2><p class="lead" data-ca="Una guia completa per veure com funciona RideSafe IA: sortides, vent, pilot en directe, seguretat, rutes i el teu club.">Una guía completa para ver cómo funciona RideSafe IA: salidas, viento, pelotón en vivo, seguridad, rutas y tu club.</p></div>
+    <div class="gvid rv"><video controls preload="none" playsinline poster="img/guia-video-portada.jpg"><source src="RideSafeIA_guia_video.mp4" type="video/mp4"></video></div>
+    <div class="gvl rv"><span data-ca="📅 Sortides del club">📅 Salidas del club</span><span data-ca="🌬️ Vent">🌬️ Viento</span><span data-ca="🛰️ Pilot en directe">🛰️ Pelotón en vivo</span><span data-ca="🚑 Avís de caiguda">🚑 Aviso de caída</span><span data-ca="🗺️ Rutes">🗺️ Rutas</span><span data-ca="🏔️ Recorregut en 3D">🏔️ Recorrido en 3D</span><span data-ca="👥 El teu club">👥 Tu club</span></div>
   </div>
 </section>
 
