@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Blog · RideSafe IA</title>
+<meta name="description" content="Las novedades de RideSafe IA, la app gratuita para salir en bici con tu club: rutas desde donde estás, varios caminos de A a B, ciclocomputador, Strava, música en ruta y más.">
+<meta property="og:title" content="Blog de RideSafe IA · Novedades">
+<meta property="og:description" content="Lo último de la app para salir en bici con tu club, con seguridad.">
+<meta property="og:image" content="https://ridesafeia.es/img/icon-512.png">
+<meta property="og:url" content="https://ridesafeia.es/blog/">
+<meta name="theme-color" content="#0E1A2B">
+<link rel="icon" type="image/png" href="../img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E1A2B;--bg2:#0A1422;--card:#16263D;--card2:#1C2F4A;--line:#2A3B55;--lime:#C8DC3C;--lime2:#D6E85A;--on-lime:#0E1A2B;--txt:#fff;--txt2:#A9B6C8;--txt3:#7B8BA1;--red:#EF4444;--orange:#F59E0B;--blue:#60A5FA}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55;overflow-x:hidden;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+/* Navegación */
+nav{position:sticky;top:0;z-index:20;background:rgba(14,26,43,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+nav.sc{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:800;white-space:nowrap}.logo img{width:34px;height:34px;border-radius:9px}.logo span{color:var(--lime)}
+.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px;color:var(--txt2)}
+.links a:hover{color:var(--txt)}
+.lang{display:flex;border:1px solid var(--line);border-radius:18px;overflow:hidden;flex-shrink:0}
+.lang button{background:none;border:0;color:var(--txt2);font:inherit;font-weight:800;font-size:12.5px;padding:6px 10px;cursor:pointer}
+.lang button.on{background:var(--lime);color:var(--on-lime)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer;margin-left:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:40px;font-weight:800;font-size:16.5px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.lime{background:var(--lime);color:var(--on-lime)}.lime:hover{background:var(--lime2)}
+.ghost{border:1.5px solid var(--line);color:var(--txt);background:var(--card)}
+nav .btn{min-height:42px;font-size:14.5px;padding:0 18px}
+/* Secciones */
+section{padding:84px 0}
+.eyebrow{display:inline-block;background:rgba(200,220,60,.12);color:var(--lime);font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:16px}
+h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;font-weight:800;letter-spacing:-.025em}
+h1 em,h2 em{font-style:normal;color:var(--lime)}
+h2{font-size:clamp(30px,4.4vw,46px);line-height:1.1;font-weight:800;letter-spacing:-.02em}
+h3{font-size:20px;font-weight:800;line-height:1.25}
+.lead{font-size:clamp(17px,2vw,19.5px);color:#C9D3E0;max-width:560px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.head{margin-bottom:46px}
+.head .lead{margin-top:14px}
+/* Hero */
+.hero{padding:56px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-260px;top:-200px;width:760px;height:760px;background:radial-gradient(circle,rgba(200,220,60,.13),transparent 62%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;position:relative}
+.hero .lead{margin:20px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 13px;font-size:13.5px;font-weight:700;color:#DCE4EE}
+.phones{position:relative;height:620px;justify-self:center;width:100%;max-width:470px}
+.ph{position:absolute;width:268px;border-radius:38px;border:9px solid #1E2C42;background:#0B1422;box-shadow:0 30px 70px rgba(0,0,0,.55);overflow:hidden}
+.ph img{width:100%}
+.ph.a{left:0;top:0;z-index:2;transform:rotate(-3deg)}
+.ph.b{right:0;top:70px;transform:rotate(4deg);opacity:.96}
+.bike{position:absolute;left:-90px;bottom:-40px;width:340px;opacity:.07;pointer-events:none}
+/* Pasos */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{background:linear-gradient(180deg,var(--card),#122036);border:1px solid var(--line);border-radius:24px;padding:26px 24px;position:relative}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--on-lime);display:grid;place-items:center;font-weight:800;font-size:20px;margin-bottom:16px}
+.step p{color:var(--txt2);margin-top:8px;font-size:15.5px}
+/* Funciones */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;transition:border-color .2s,transform .2s}
+.f:hover{border-color:rgba(200,220,60,.5);transform:translateY(-2px)}
+.f .e{font-size:30px;line-height:1;margin-bottom:12px}
+.f h3{font-size:17px}
+.f p{color:var(--txt2);font-size:14.5px;margin-top:6px}
+.gprev{display:flex;gap:18px;justify-content:center}.gprev a{flex:0 1 280px;max-width:280px;width:44%}.gprev img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.new{display:inline-block;background:var(--lime);color:var(--on-lime);font-size:10.5px;font-weight:800;border-radius:8px;padding:2px 7px;margin-left:6px;vertical-align:middle;letter-spacing:.04em}
+/* Bloques con pantallas */
+.show{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:96px}
+.show:last-child{margin-bottom:0}
+.show.rev .txt{order:2}
+.show .txt p{color:var(--txt2);font-size:17px;margin-top:14px}
+.show ul{list-style:none;margin-top:18px}
+.show li{position:relative;padding-left:30px;margin-bottom:10px;color:#DCE4EE;font-size:16px}
+.show li:before{content:"";position:absolute;left:0;top:6px;width:18px;height:18px;border-radius:50%;background:rgba(200,220,60,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8DC3C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.pair{display:flex;gap:18px;justify-content:center;align-items:flex-start}
+.pair .ph{position:relative;width:250px;transform:none}
+.pair .ph:nth-child(2){margin-top:44px}
+.card-img{border-radius:22px;box-shadow:0 26px 60px rgba(0,0,0,.5);max-width:360px;margin:0 auto}
+/* Clubes */
+.roles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.role{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.role .e{font-size:28px}
+.role h3{font-size:17px;margin-top:8px}
+.role p{color:var(--txt2);font-size:14.5px;margin-top:6px}
+.priv{display:flex;gap:18px;align-items:center;background:linear-gradient(90deg,rgba(200,220,60,.1),rgba(200,220,60,.02));border:1px solid rgba(200,220,60,.35);border-radius:22px;padding:22px 26px;margin-top:22px}
+.priv .e{font-size:34px}
+.priv p{color:#DCE4EE}
+/* Garmin */
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.model{border-radius:18px;padding:16px 18px;background:var(--card);border:1.5px solid var(--line);font-size:14.5px;color:#DCE4EE}
+.model b{display:block;font-size:15.5px;margin-bottom:4px}
+.model.ok{border-color:rgba(200,220,60,.6)}.model.mid{border-color:rgba(245,158,11,.6)}.model.no{border-color:rgba(239,68,68,.55)}
+/* Vídeo */
+.media{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+.video{width:100%;max-width:360px;justify-self:center;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000}
+.video video{width:100%;display:block}
+.gvid{max-width:880px;margin:0 auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 20px 50px rgba(0,0,0,.45)}.gvid video{width:100%;display:block;aspect-ratio:16/9}
+.gvl{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}.gvl span{background:var(--card,#16263D);border:1px solid var(--line);border-radius:20px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--txt2)}
+.pod{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.pod audio{width:100%;margin-top:12px;accent-color:var(--lime)}
+.pod p{color:var(--txt2);font-size:14.5px;margin-top:6px}
+/* Precio */
+.price{max-width:560px;margin:0 auto;background:linear-gradient(180deg,var(--card),#122036);border:1.5px solid rgba(200,220,60,.5);border-radius:28px;padding:34px;text-align:center}
+.price .big{font-size:76px;font-weight:800;line-height:1;margin:10px 0 4px;color:var(--lime)}
+.price ul{list-style:none;margin:18px 0 24px;text-align:left;display:inline-block}
+.price li{margin-bottom:8px;color:#DCE4EE}
+/* Instalar */
+.install{display:grid;grid-template-columns:1fr 1fr auto;gap:18px;align-items:stretch}
+.os{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.os ol{margin:12px 0 0 20px;color:#DCE4EE}.os li{margin-bottom:8px}
+.qr{background:#fff;border-radius:22px;padding:18px;text-align:center;color:var(--on-lime);font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.qr img{width:170px;height:170px}
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:10px}
+summary{font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--lime);font-weight:800;font-size:22px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--txt2);margin-top:10px}
+/* Contacto y pie */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+.ct{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;text-align:center}
+.ct .e{font-size:28px}.ct b{display:block;margin-top:6px}.ct span{color:var(--txt2);font-size:15px}
+.final{background:radial-gradient(700px 300px at 50% 0,rgba(200,220,60,.14),transparent 70%),var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+footer{padding:34px 0 50px;color:var(--txt3);font-size:14px}
+footer .wrap{display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap;align-items:center}
+footer a:hover{color:var(--txt)}
+.fl{display:flex;gap:18px;flex-wrap:wrap}
+/* Aparición al hacer scroll */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* Móvil */
+@media (max-width:980px){
+  .links{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 20px 14px}
+  .links.open{display:flex}.links a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  nav .btn.lime{display:none}
+  .lang{margin-left:auto}
+  .hero .wrap,.show,.media{grid-template-columns:1fr}
+  .show.rev .txt{order:0}
+  .phones{height:520px;max-width:390px}
+  .ph{width:222px}
+  .grid,.roles{grid-template-columns:1fr 1fr}
+  .steps,.models,.contact{grid-template-columns:1fr}
+  .install{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .show{margin-bottom:70px;gap:34px}
+}
+@media (max-width:520px){
+  .grid,.roles{grid-template-columns:1fr}
+  .phones{height:430px}.ph{width:188px;border-width:7px;border-radius:30px}.ph.b{top:50px}
+  .pair .ph{width:46%}
+  .logo{font-size:19px}
+  .btn{width:100%}.cta{flex-direction:column}
+}
+
+/* Fondo grupeta en la portada */
+.hero-cyclists-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/portada-grupeta.jpg) 100% 42%/118% auto no-repeat;opacity:.72}
+.hero-cyclists-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(14,26,43,.88) 22%,rgba(14,26,43,.45) 42%,rgba(14,26,43,.25) 70%,rgba(14,26,43,.45) 100%),linear-gradient(180deg,rgba(14,26,43,.85) 0%,transparent 20%,transparent 72%,var(--bg) 100%)}
+.hero .wrap{z-index:2}
+.hero:before,.hero .bike{z-index:1}
+@media(max-width:1100px){.hero-cyclists-bg{background-size:cover;background-position:62% 50%}}
+@media(max-width:900px){.hero-cyclists-bg{background-image:url(img/portada-grupeta-movil.jpg);background-size:auto 62%;background-position:68% 38%;opacity:.6}.hero-cyclists-bg:after{background:linear-gradient(180deg,rgba(14,26,43,.7) 0%,rgba(14,26,43,.55) 30%,rgba(14,26,43,.8) 55%,var(--bg) 66%)}}
+
+/* Blog */
+.bhero{padding:120px 0 30px;text-align:center}
+.bhero h1{font-size:clamp(32px,5vw,48px);line-height:1.1;font-weight:800}
+.bhero h1 em{font-style:normal;color:var(--lime)}
+.bhero p{color:var(--txt2);margin-top:12px;font-size:17px}
+.posts{max-width:880px;margin:0 auto;padding:10px 20px 60px;display:flex;flex-direction:column;gap:22px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px}
+.pmeta{color:var(--txt3);font-size:13.5px;font-weight:700;margin-bottom:10px}
+.pill{display:inline-block;background:rgba(200,220,60,.14);color:var(--lime);border-radius:10px;padding:2px 9px;font-weight:800;margin-right:4px}
+.post h2{font-size:clamp(21px,3vw,26px);line-height:1.25;margin-bottom:12px}
+.post p{color:var(--txt2);margin-top:10px;font-size:16px}
+.post p b,.post li b{color:var(--txt)}
+.post ul{margin:10px 0 0 4px;list-style:none;display:flex;flex-direction:column;gap:6px;color:var(--txt2)}
+.pbody.wimg{display:grid;grid-template-columns:1fr 210px;gap:24px;align-items:start}
+.bimg img{width:100%;height:auto;border-radius:22px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(0,0,0,.4)}
+@media(max-width:720px){.pbody.wimg{grid-template-columns:1fr}.bimg{max-width:240px;margin:6px auto 0}.post{padding:20px}.bhero{padding-top:100px}}
+</style>
+</head>
+<body>
+<nav id="nav" class="sc"><div class="wrap">
+  <a class="logo" href="../"><img src="../img/icon-192.png" alt="">RideSafe <span>IA</span></a>
+  <div class="links" id="links">
+    <a href="../#novedades" data-ca="Novetats">Novedades</a>
+    <a href="../#funciones" data-ca="Funcions">Funciones</a>
+    <a href="../#guia" data-ca="Guia">Guía</a>
+    <a href="../#contacto" data-ca="Contacte">Contacto</a>
+  </div>
+  <div class="lang" role="group" aria-label="Idioma"><button class="on" data-l="es">ES</button><button data-l="ca">CA</button></div>
+  <a class="btn lime" href="https://app.ridesafeia.es" target="_blank" rel="noopener" data-ca="🚴 Obrir l'app">🚴 Abrir la app</a>
+  <button class="burger" id="burger" aria-label="Menú">☰</button>
+</div></nav>
+<header class="bhero"><div class="wrap"><span class="eyebrow">Blog</span><h1 data-ca="Novetats de <em>RideSafe IA</em>" style="margin-top:12px">Novedades de <em>RideSafe IA</em></h1><p data-ca="El que anem afegint a l'app, explicat de manera senzilla. Tot gratuït i s'actualitza sol.">Lo que vamos añadiendo a la app, explicado de forma sencilla. Todo gratis y se actualiza solo.</p></div></header>
+<main class="posts">
+<article class="post rv" id="v5-13"><div class="pmeta"><span class="pill">v5.13</span> <span data-ca="Octubre 2026">Octubre 2026</span></div>
+  <div class="pbody wimg"><div><h2><span class="pico">🎵</span> <span data-ca="Música en ruta, per l&#x27;altaveu i sense tallar els avisos">Música en ruta, por el altavoz y sin cortar los avisos</span></h2><p data-ca="Molts ens demanàveu música per fer més amenes les rutes. Ja és a &lt;b&gt;Perfil → 🎵 Música en ruta&lt;/b&gt; i, durant la sortida, al botó &lt;b&gt;«⋯» → 🎵&lt;/b&gt;.">Muchos nos pedíais música para hacer más amenas las rutas. Ya está en <b>Perfil → 🎵 Música en ruta</b> y, durante la salida, en el botón <b>«⋯» → 🎵</b>.</p><p data-ca="Funciona amb &lt;b&gt;Spotify&lt;/b&gt;: poses la teva música i tornes a RideSafe. Si s&#x27;atura, el botó 🎵 la torna a obrir. I amb l&#x27;opció &lt;b&gt;«Veu que no atura la música»&lt;/b&gt;, el temps, els girs i els avisos del grup se senten sense tallar la cançó.">Funciona con <b>Spotify</b>: pones tu música y vuelves a RideSafe. Si se para, el botón 🎵 la vuelve a abrir. Y con la opción <b>«Voz que no para la música»</b>, el tiempo, los giros y los avisos del grupo se oyen sin cortar la canción.</p><p data-ca="⚠️ &lt;b&gt;Sempre per l&#x27;altaveu&lt;/b&gt; del mòbil o de manillar: a Espanya està prohibit anar en bici amb auriculars (Reglament General de Circulació, art. 18.2).">⚠️ <b>Siempre por el altavoz</b> del móvil o de manillar: en España está prohibido ir en bici con auriculares (Reglamento General de Circulación, art. 18.2).</p></div><div class="bimg"><img src="../img/nov-musica.jpg" alt="" width="640" height="1385" loading="lazy"></div></div></article>
+<article class="post rv" id="v5-12"><div class="pmeta"><span class="pill">v5.12</span> <span data-ca="Octubre 2026">Octubre 2026</span></div>
+  <div class="pbody"><div><h2><span class="pico">📍</span> <span data-ca="«Què hi ha per aquí?»: rutes per sortir ja, siguis on siguis">«¿Qué hay por aquí?»: rutas para salir ya, estés donde estés</span></h2><p data-ca="Al mapa de Rutes, el botó verd &lt;b&gt;«📍 Què hi ha per aquí?»&lt;/b&gt; ajunta en una sola targeta tot el que és útil de la zona:">En el mapa de Rutas, el botón verde <b>«📍 ¿Qué hay por aquí?»</b> junta en una sola tarjeta todo lo útil de la zona:</p><ul><li data-ca="🚴 &lt;b&gt;3 rutes circulars&lt;/b&gt; des d&#x27;on ets (curta, mitjana i llarga), amb el dibuix, el desnivell i el temps.">🚴 <b>3 rutas circulares</b> desde donde estás (corta, media y larga), con su dibujo, desnivel y tiempo.</li><li data-ca="📅 Les &lt;b&gt;sortides obertes&lt;/b&gt; a menys de 40 km.">📅 Las <b>salidas abiertas</b> a menos de 40 km.</li><li data-ca="🗺️ Les &lt;b&gt;rutes del teu club&lt;/b&gt; que comencen a prop.">🗺️ Las <b>rutas de tu club</b> que empiezan cerca.</li><li data-ca="💧 &lt;b&gt;Fonts, bars, farmàcies i tallers&lt;/b&gt; per parar.">💧 <b>Fuentes, bares, farmacias y talleres</b> para parar.</li></ul><p data-ca="Si mous el mapa a una altra zona, t&#x27;ensenya el que hi ha allà: perfecte per preparar les rutes d&#x27;un viatge.">Si mueves el mapa a otra zona, te enseña lo que hay allí: perfecto para preparar las rutas de un viaje.</p></div></div></article>
+<article class="post rv" id="v5-11"><div class="pmeta"><span class="pill">v5.11</span> <span data-ca="Octubre 2026">Octubre 2026</span></div>
+  <div class="pbody"><div><h2><span class="pico">🏪</span> <span data-ca="Botigues amigues: la teva botiga de bicis et recomana RideSafe">Tiendas amigas: tu tienda de bicis te recomienda RideSafe</span></h2><p data-ca="Les botigues i tallers de bicis ja poden &lt;b&gt;recomanar RideSafe als seus clients&lt;/b&gt; amb el seu propi QR. Qui hi entra veu en obrir l&#x27;app el logo de la botiga que la hi recomana.">Las tiendas y talleres de bicis ya pueden <b>recomendar RideSafe a sus clientes</b> con su propio QR. Quien entra por él ve al abrir la app el logo de la tienda que se la recomienda.</p><p data-ca="Per al ciclista no canvia res: l&#x27;app continua sent &lt;b&gt;gratuïta&lt;/b&gt; i completa. Tens una botiga o un taller i t&#x27;interessa? &lt;a href=&quot;../#contacto&quot; style=&quot;color:var(--lime);font-weight:700&quot;&gt;Escriu-nos&lt;/a&gt;.">Para el ciclista no cambia nada: la app sigue siendo <b>gratis</b> y completa. ¿Tienes una tienda o un taller y te interesa? <a href="../#contacto" style="color:var(--lime);font-weight:700">Escríbenos</a>.</p></div></div></article>
+<article class="post rv" id="v5-10"><div class="pmeta"><span class="pill">v5.10</span> <span data-ca="Octubre 2026">Octubre 2026</span></div>
+  <div class="pbody"><div><h2><span class="pico">🔀</span> <span data-ca="Tres camins per anar d&#x27;A a B">Tres caminos para ir de A a B</span></h2><p data-ca="En prémer &lt;b&gt;«Anar a un destí»&lt;/b&gt;, l&#x27;app ja no et dona un sol camí: t&#x27;ensenya &lt;b&gt;fins a 3 al mapa&lt;/b&gt;, amb els km, els metres de pujada i el temps.">Al pulsar <b>«Ir a un destino»</b>, la app ya no te da un solo camino: te enseña <b>hasta 3 en el mapa</b>, con sus km, metros de subida y tiempo.</p><p data-ca="Veuràs quin és &lt;b&gt;«📏 el més curt»&lt;/b&gt; i quin té &lt;b&gt;«⛰️ menys pujada»&lt;/b&gt;. Toques el que prefereixis, a la targeta o a la línia grisa del mapa, i la navegació et porta exactament per allà.">Verás cuál es <b>«📏 la más corta»</b> y cuál tiene <b>«⛰️ menos subida»</b>. Tocas el que prefieras, en su tarjeta o en la línea gris del mapa, y la navegación te lleva exactamente por ahí.</p></div></div></article>
+<article class="post rv" id="v5-9"><div class="pmeta"><span class="pill">v5.9</span> <span data-ca="Octubre 2026">Octubre 2026</span></div>
+  <div class="pbody wimg"><div><h2><span class="pico">📲</span> <span data-ca="La teva ruta, al comptaquilòmetres (i les sortides, des de Strava)">Tu ruta, en el ciclocomputador (y tus salidas, desde Strava)</span></h2><p data-ca="Nou botó &lt;b&gt;«📲 Enviar al comptaquilòmetres»&lt;/b&gt; al planificador i a cada sortida. Descarrega la ruta amb l&#x27;altitud i t&#x27;explica, pas a pas, com passar-la al teu &lt;b&gt;iGPSPORT, Garmin, Wahoo o Bryton&lt;/b&gt; des de l&#x27;app de l&#x27;aparell.">Nuevo botón <b>«📲 Enviar al ciclocomputador»</b> en el planificador y en cada salida. Descarga la ruta con su altitud y te explica, paso a paso, cómo pasarla a tu <b>iGPSPORT, Garmin, Wahoo o Bryton</b> desde la app del aparato.</p><p data-ca="I en sentit contrari: amb la connexió amb &lt;b&gt;Strava&lt;/b&gt;, les sortides que graves amb el rellotge o el comptaquilòmetres arriben soles a les teves Activitats de RideSafe. És en proves i s&#x27;obrirà a tothom molt aviat.">Y en sentido contrario: con la conexión con <b>Strava</b>, las salidas que grabas con el reloj o el ciclocomputador llegan solas a tus Actividades de RideSafe. Está en pruebas y se abrirá a todos muy pronto.</p></div><div class="bimg"><img src="../img/nov-ciclocomputador.jpg" alt="" width="640" height="1385" loading="lazy"></div></div></article>
+<article class="post rv" id="v5-8"><div class="pmeta"><span class="pill">v5.8</span> <span data-ca="Octubre 2026">Octubre 2026</span></div>
+  <div class="pbody"><div><h2><span class="pico">🚑</span> <span data-ca="Seguretat primer">Seguridad primero</span></h2><p data-ca="Sortir junts, tornar tots. Per això, en instal·lar l&#x27;app, una de les primeres pantalles et demana un &lt;b&gt;contacte d&#x27;emergència&lt;/b&gt; i t&#x27;ensenya com funciona l&#x27;&lt;b&gt;avís de caiguda&lt;/b&gt;: si el mòbil nota un cop fort en marxa i no respons en 30 segons, avisa el teu grup i et deixa trucar al teu contacte i al 112.">Salir juntos, volver todos. Por eso, al instalar la app, una de las primeras pantallas te pide un <b>contacto de emergencia</b> y te enseña cómo funciona el <b>aviso de caída</b>: si el móvil nota un golpe fuerte en marcha y no respondes en 30 segundos, avisa a tu grupo y te deja llamar a tu contacto y al 112.</p><p data-ca="Si ja feies servir l&#x27;app i no l&#x27;hi tenies posat, t&#x27;ho recordarà una vegada. Triga 20 segons.">Si ya usabas la app y no lo tenías puesto, te lo recordará una vez. Tarda 20 segundos.</p></div></div></article>
+<div class="cta rv" style="justify-content:center;margin-top:8px"><a class="btn lime" href="https://app.ridesafeia.es" target="_blank" rel="noopener" data-ca="🚴 Prova-ho a l'app">🚴 Pruébalo en la app</a><a class="btn ghost" href="../" data-ca="← Tornar a la web">← Volver a la web</a></div>
+</main>
+<footer><div class="wrap">
+  <a class="logo" href="../" style="font-size:17px"><img src="../img/icon-192.png" alt="" style="width:26px;height:26px">RideSafe <span>IA</span></a>
+  <div data-ca="© 2026 RideSafe IA · Lleida · Aquesta web no fa servir galetes de seguiment">© 2026 RideSafe IA · Lleida · Esta web no usa cookies de seguimiento</div>
+</div></footer>
+<script>
+const links=document.getElementById('links');
+document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const els=[...document.querySelectorAll('[data-ca]')];els.forEach(el=>el.dataset.es=el.innerHTML);
+function setLang(l){els.forEach(el=>el.innerHTML=l==='ca'?el.dataset.ca:el.dataset.es);document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));try{localStorage.setItem('rs_lang',l)}catch(e){}}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let l0='es';try{l0=localStorage.getItem('rs_lang')||((navigator.language||'').toLowerCase().startsWith('ca')?'ca':'es')}catch(e){}
+if(l0==='ca')setLang('ca');
+</script>
+</body>
+</html>
