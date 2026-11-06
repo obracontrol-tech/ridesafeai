@@ -173,6 +173,17 @@ footer a:hover{color:var(--txt)}
 .hero-cyclists-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/portada-grupeta.jpg) 100% 42%/118% auto no-repeat;opacity:.72}
 .hero-cyclists-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(14,26,43,.88) 22%,rgba(14,26,43,.45) 42%,rgba(14,26,43,.25) 70%,rgba(14,26,43,.45) 100%),linear-gradient(180deg,rgba(14,26,43,.85) 0%,transparent 20%,transparent 72%,var(--bg) 100%)}
 .hero .wrap{z-index:2}
+/* Nov 2026: fotos de fondo con transparencia en secciones (como en la app) */
+.phbg{position:relative;isolation:isolate;overflow:hidden}
+.phbg::before{content:"";position:absolute;left:0;right:0;top:0;height:min(100%,1100px);z-index:-1;pointer-events:none;background:linear-gradient(rgba(10,20,34,.35),rgba(10,20,34,.35)),var(--ph) var(--php,center 40%)/cover no-repeat;opacity:.55;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 62%,transparent 100%)}
+.phbg .f,.phbg .ct{background:rgba(22,38,61,.72);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.phbg h2,.phbg .eyebrow,.phbg .lead,.phbg .txt p,.phbg .txt li{text-shadow:0 2px 12px rgba(0,0,0,.65)}
+#funciones{--ph:url(img/fondo-mtb-grupo.jpg);--php:center 45%}
+#seguridad{--ph:url(img/fondo-carretera.jpg);--php:center 22%}
+#clubes{--ph:url(img/fondo-mtb-bajada.jpg);--php:center 50%}
+#contacto{--ph:url(img/fondo-mtb-barro.jpg);--php:center 30%}
+@media(max-width:900px){.phbg::before{opacity:.45;height:min(100%,900px)}}
+
 .hero:before,.hero .bike{z-index:1}
 @media(max-width:1100px){.hero-cyclists-bg{background-size:cover;background-position:62% 50%}}
 @media(max-width:900px){.hero-cyclists-bg{background-image:url(img/portada-grupeta-movil.jpg);background-size:auto 62%;background-position:68% 38%;opacity:.6}.hero-cyclists-bg:after{background:linear-gradient(180deg,rgba(14,26,43,.7) 0%,rgba(14,26,43,.55) 30%,rgba(14,26,43,.8) 55%,var(--bg) 66%)}}
@@ -239,7 +250,7 @@ footer a:hover{color:var(--txt)}
 </section>
 
 <!-- ============ FUNCIONES ============ -->
-<section id="funciones" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="funciones" class="phbg" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="head center rv"><span class="eyebrow" data-ca="Funcions">Funciones</span><h2 data-ca="Tot el que necessita <em>el teu club</em>">Todo lo que necesita <em>tu club</em></h2><p class="lead" data-ca="Pensada per i per a ciclistes: botons grans, textos clars i res de complicacions.">Pensada por y para ciclistas: botones grandes, textos claros y nada de complicaciones.</p></div>
     <div class="grid">
@@ -266,30 +277,25 @@ footer a:hover{color:var(--txt)}
   </div>
 </section>
 
-<!-- ============ NOVEDADES 5.x (octubre 2026) ============ -->
+<!-- ============ NOVEDADES 5.29 (noviembre 2026) ============ -->
 <section id="novedades">
   <div class="wrap">
-    <div class="head center rv"><span class="eyebrow" data-ca="Novetats · versió 5.14">Novedades · versión 5.14</span><h2 data-ca="El més nou per a <em>sortir junts</em>">Lo más nuevo para <em>salir juntos</em></h2><p class="lead" data-ca="Tot inclòs i gratuït. S'actualitza sol a l'app.">Todo incluido y gratis. Se actualiza solo en la app.</p></div>
+    <div class="head center rv"><span class="eyebrow" data-ca="Novetats · versió 5.29">Novedades · versión 5.29</span><h2 data-ca="El més nou per a <em>sortir segur</em>">Lo más nuevo para <em>salir seguro</em></h2><p class="lead" data-ca="Tot inclòs i gratis. S'actualitza sol a l'app.">Todo incluido y gratis. Se actualiza solo en la app.</p></div>
     <div class="grid">
-      <div class="f rv"><div class="e">🎙️</div><h3 data-ca="Walkie del pilot &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Walkie del pelotón <span class="new">NUEVO</span></h3><p data-ca="A les sortides de grup, mantén premut el botó verd, parla i deixa anar: la teva veu sona sola al mòbil de tota la grupeta.">En las salidas de grupo, mantén pulsado el botón verde, habla y suelta: tu voz suena sola en el móvil de toda la grupeta.</p></div>
-      <div class="f rv"><div class="e">📍</div><h3 data-ca="Ubicació per a la família, millorada &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Ubicación para la familia, mejorada <span class="new">NUEVO</span></h3><p data-ca="Et veuen moure&#x27;t en directe i tu tries quant de temps: de 30 minuts a 8 hores, o fins acabar la ruta.">Te ven moverte en directo y tú eliges cuánto tiempo: de 30 minutos a 8 horas, o hasta terminar la ruta.</p></div>
-      <div class="f rv"><div class="e">📍</div><h3 data-ca="Què hi ha per aquí?">¿Qué hay por aquí?</h3><p data-ca="Un botó i l&#x27;app et proposa 3 rutes circulars des d&#x27;on ets, les sortides obertes a prop, les rutes del teu club i on parar.">Un botón y la app te propone 3 rutas circulares desde donde estás, las salidas abiertas cerca, las rutas de tu club y dónde parar.</p></div>
-      <div class="f rv"><div class="e">🔀</div><h3 data-ca="Diversos camins d&#x27;A a B">Varios caminos de A a B</h3><p data-ca="Fins a 3 recorreguts al mapa: el més curt, el de menys pujada i una altra opció. Toques el que prefereixis.">Hasta 3 recorridos en el mapa: el más corto, el de menos subida y otra opción. Tocas el que prefieras.</p></div>
-      <div class="f rv"><div class="e">📲</div><h3 data-ca="Ruta al comptaquilòmetres">Ruta al ciclocomputador</h3><p data-ca="Passa la ruta al teu iGPSPORT, Garmin, Wahoo o Bryton amb els passos exactes de la seva app.">Pasa la ruta a tu iGPSPORT, Garmin, Wahoo o Bryton con los pasos exactos de su app.</p></div>
-      <div class="f rv"><div class="e">🟠</div><h3 data-ca="Connexió amb Strava">Conexión con Strava</h3><p data-ca="Les sortides gravades amb el rellotge o el comptaquilòmetres arriben soles a RideSafe. En proves: molt aviat per a tothom.">Tus salidas grabadas con el reloj o el ciclocomputador llegan solas a RideSafe. En pruebas: muy pronto para todos.</p></div>
-      <div class="f rv"><div class="e">🚑</div><h3 data-ca="Seguretat primer">Seguridad primero</h3><p data-ca="En començar, l&#x27;app et demana un contacte d&#x27;emergència i t&#x27;ensenya com funciona l&#x27;avís de caiguda.">Al empezar, la app te pide un contacto de emergencia y te enseña cómo funciona el aviso de caída.</p></div>
-      <div class="f rv"><div class="e">☕</div><h3 data-ca="Parades al teu gust">Paradas a tu gusto</h3><p data-ca="Fonts, bars i farmàcies al costat de la ruta: les veus o les treus del mapa amb un toc.">Fuentes, bares y farmacias junto a la ruta: las ves o las quitas del mapa con un toque.</p></div>
-      <div class="f rv"><div class="e">🎵</div><h3 data-ca="Música en ruta">Música en ruta</h3><p data-ca="Amb Spotify per l&#x27;altaveu: un botó la torna a posar i la veu de l&#x27;app no la talla.">Con Spotify por el altavoz: un botón la vuelve a poner y la voz de la app no la corta.</p></div>
-      <div class="f rv"><div class="e">🏪</div><h3 data-ca="Botigues amigues">Tiendas amigas</h3><p data-ca="La teva botiga de bicis pot recomanar l&#x27;app amb el seu logo i el seu QR. En tens una? Escriu-nos.">Tu tienda de bicis puede recomendar la app con su logo y su QR. ¿Tienes una? Escríbenos.</p></div>
+      <div class="f rv"><div class="e">📡</div><h3 data-ca="Seguiment estable per a la família &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Seguimiento estable para la familia <span class="new">NUEVO</span></h3><p data-ca="La teva família et veu al mapa encara que bloquegis el mòbil o facis servir altres apps. Es configura un sol cop amb l'app gratuïta Traccar Client.">Tu familia te ve en el mapa aunque bloquees el móvil o uses otras apps. Se configura una sola vez con la app gratuita Traccar Client.</p></div>
+      <div class="f rv"><div class="e">🗺️</div><h3 data-ca="Rutes marcades GR i BTT &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Rutas marcadas GR y BTT <span class="new">NUEVO</span></h3><p data-ca="Toca una ruta senyalitzada del mapa per veure-la sencera i seguir-la. Tu tries què veure: BTT, cicloturistes o senders.">Toca una ruta señalizada del mapa para verla entera y seguirla. Tú eliges qué ver: BTT, cicloturistas o senderos.</p></div>
+      <div class="f rv"><div class="e">🔁</div><h3 data-ca="Recalcula si et desvies &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Recalcula si te sales <span class="new">NUEVO</span></h3><p data-ca="Si et desvies del camí, l'app recalcula la ruta sola i et guia amb veu, com un navegador de cotxe.">Si te sales del camino, la app recalcula la ruta sola y te guía con voz, como un navegador de coche.</p></div>
+      <div class="f rv"><div class="e">🔋</div><h3 data-ca="Recàrrega e-bike &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Recarga e-bike <span class="new">NUEVO</span></h3><p data-ca="Punts per carregar la teva bici elèctrica per tot Espanya. Encara són pocs: els anirem afegint de mica en mica.">Puntos para cargar tu bici eléctrica por toda España. Aún son pocos: los iremos añadiendo poco a poco.</p></div>
+      <div class="f rv"><div class="e">🪖</div><h3 data-ca="Mode Casc &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Modo Casco <span class="new">NUEVO</span></h3><p data-ca="Amb el teu casc amb intercomunicador, sents la veu i els avisos de l'app i fas servir els seus botons sense tocar el mòbil.">Con tu casco con intercomunicador, oyes la voz y los avisos de la app y usas sus botones sin tocar el móvil.</p></div>
+      <div class="f rv"><div class="e">🎵</div><h3 data-ca="Música i veu, juntes &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Música y voz, juntas <span class="new">NUEVO</span></h3><p data-ca="Els avisos de veu abaixen un moment la teva música d'Spotify i la tornen a apujar. Ja no la tallen.">Los avisos de voz bajan un momento tu música de Spotify y la vuelven a subir. Ya no la cortan.</p></div>
+      <div class="f rv"><div class="e">🔴</div><h3 data-ca="Avisos sense llegir &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Avisos sin leer <span class="new">NUEVO</span></h3><p data-ca="Un punt vermell t'avisa de missatges nous al xat del club i de sortides noves de la teva grupeta.">Un punto rojo te avisa de mensajes nuevos en el chat del club y de salidas nuevas de tu grupeta.</p></div>
+      <div class="f rv"><div class="e">👆</div><h3 data-ca="Versió Simple i Pro &lt;span class=&quot;new&quot;&gt;NOU&lt;/span&gt;">Versión Simple y Pro <span class="new">NUEVO</span></h3><p data-ca="Comença amb RideSafe Simple, només l'essencial. Quan vulguis clubs, grupetes i tota la resta, passa a Pro.">Empieza con RideSafe Simple, solo lo esencial. Cuando quieras clubes, grupetas y todo lo demás, pasa a Pro.</p></div>
     </div>
-    <div class="pair rv" style="margin-top:26px"><div class="ph"><img src="img/nov-walkie.jpg" alt="Walkie del pelotón: Pepe habla al grupo" width="640" height="1385" loading="lazy"></div><div class="ph"><img src="img/nov-familia.jpg" alt="Eliges cuánto tiempo te sigue tu familia" width="640" height="1385" loading="lazy"></div></div>
-    <p class="rv" style="text-align:center;color:var(--txt2);font-size:14.5px;margin-top:18px" data-ca="I a la 5.7: dissenyador de rutes, vent i temperatura en veu, previsió amb 3 models, xat i enquestes del club, i sortides obertes.">Y en la 5.7: diseñador de rutas, viento y temperatura en voz, previsión con 3 modelos, chat y encuestas del club, y salidas abiertas.</p>
-    <div class="cta rv" style="justify-content:center;margin-top:20px"><a class="btn lime" href="https://app.ridesafeia.es" target="_blank" rel="noopener" data-ca="🚴 Prova-ho a l'app">🚴 Pruébalo en la app</a><a class="btn ghost" href="blog/" data-ca="📰 Llegeix-ho al blog">📰 Léelo en el blog</a></div>
   </div>
 </section>
 
 <!-- ============ PANTALLAS ============ -->
-<section id="seguridad">
+<section id="seguridad" class="phbg">
   <div class="wrap">
     <div class="show rv">
       <div class="txt">
@@ -337,7 +343,7 @@ footer a:hover{color:var(--txt)}
 </section>
 
 <!-- ============ CLUBES ============ -->
-<section id="clubes" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="clubes" class="phbg" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="show rv" style="margin-bottom:0">
       <div class="txt">
@@ -470,7 +476,7 @@ footer a:hover{color:var(--txt)}
 </section>
 
 <!-- ============ CONTACTO ============ -->
-<section id="contacto" class="final">
+<section id="contacto" class="final phbg">
   <div class="wrap">
     <div class="head center rv"><h2 data-ca="Vols RideSafe IA <em>per al teu club?</em>">¿Quieres RideSafe IA <em>para tu club?</em></h2><p class="lead" data-ca="Et donem el codi del club, t'ajudem a crear les grupetes i a presentar-la als socis.">Te damos el código del club, te ayudamos a crear las grupetas y a presentarla a los socios.</p></div>
     <div class="contact">
