@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Seguimiento con móvil bloqueado · Guía · RideSafe IA</title>
+<meta name="description" content="Guía paso a paso para que tu familia te siga en el mapa aunque lleves el móvil bloqueado en el bolsillo.">
+<link rel="icon" type="image/png" href="img/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E1A2B;--bg2:#0A1422;--card:#16263D;--card2:#1C2F4A;--line:#2A3B55;--lime:#C8DC3C;--on-lime:#0E1A2B;--txt:#fff;--txt2:#A9B6C8;--txt3:#7B8BA1;--red:#EF4444;--orange:#F59E0B;--blue:#60A5FA;--green:#22C55E}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--lime)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 60px}
+header{padding:28px 0 18px;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--txt);text-decoration:none}
+.logo img{width:36px;height:36px;border-radius:10px}
+.tag{display:inline-block;background:var(--lime);color:var(--on-lime);font-weight:800;font-size:12px;padding:3px 10px;border-radius:99px;margin-top:18px;letter-spacing:.4px}
+h1{font-size:clamp(26px,6vw,38px);line-height:1.15;margin-top:12px;letter-spacing:-.5px}
+.lead{color:var(--txt2);font-size:17px;margin-top:10px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.toc a{background:var(--card);border:1px solid var(--line);color:var(--txt2);text-decoration:none;font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:99px}
+h2{font-size:22px;margin:34px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .ico{font-size:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:12px}
+.card h3{font-size:17.5px;display:flex;gap:12px;align-items:flex-start;line-height:1.3}
+.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--lime);color:var(--on-lime);font-weight:900;display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+.card p,.card li{color:var(--txt2);font-size:15.5px}
+.card p{margin-top:8px}
+.card ul,.card ol{margin:8px 0 0 20px}
+.card li{margin-top:5px}
+.card b{color:var(--txt)}
+.code{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--bg2);border:1px solid var(--line);padding:2px 8px;border-radius:8px;font-size:14px;color:var(--lime);word-break:break-all}
+.path{display:inline-block;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:6px 10px;margin-top:8px;font-size:14px;color:var(--txt)}
+.note{border-left:4px solid var(--lime);background:var(--card2)}
+.warn{border-left:4px solid var(--orange);background:rgba(245,158,11,.08)}
+.bad{border-left:4px solid var(--red);background:rgba(239,68,68,.08)}
+.ok{border-left:4px solid var(--green);background:rgba(34,197,94,.08)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.brand{font-size:13px;font-weight:800;letter-spacing:.5px;color:var(--lime);text-transform:uppercase}
+.btn{display:inline-block;background:var(--lime);color:var(--on-lime);font-weight:800;text-decoration:none;padding:12px 18px;border-radius:14px;margin-top:12px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.flow span{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:13.5px;font-weight:600}
+.flow i{font-style:normal;color:var(--txt3)}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14.5px}
+td{padding:9px 6px;border-top:1px solid var(--line);color:var(--txt2);vertical-align:top}
+td:first-child{color:var(--txt);font-weight:700;width:42%}
+footer{text-align:center;color:var(--txt3);font-size:13px;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="logo" href="./"><img src="img/icon-192.png" alt="">RideSafe IA</a>
+  <div><span class="tag">🛰️ BETA · GUÍA DE INSTALACIÓN</span></div>
+  <h1>Seguimiento con el móvil bloqueado</h1>
+  <p class="lead">Tu familia te ve en el mapa en directo aunque lleves el móvil <b>bloqueado en el bolsillo</b> o uses otras apps. Se configura <b>una sola vez</b>, en unos 5 minutos.</p>
+  <nav class="toc">
+    <a href="#como">Cómo funciona</a><a href="#instalar">Instalar</a><a href="#permisos">Permisos</a><a href="#marcas">Samsung · Xiaomi</a><a href="#salida">En cada salida</a><a href="#problemas">Problemas</a>
+  </nav>
+</header>
+
+<h2 id="como"><span class="ico">💡</span>Cómo funciona</h2>
+<div class="card">
+  <p>RideSafe IA usa una app gratuita y de código abierto, <b>Traccar Client</b>. Como es una app instalada, el teléfono la deja trabajar con la pantalla apagada. Traccar envía tu posición a RideSafe IA y tu familia la ve en el mapa.</p>
+  <div class="flow"><span>📱 Traccar Client</span><i>→</i><span>🛰️ Servidor RideSafe IA</span><i>→</i><span>👨‍👩‍👧 Mapa de tu familia</span></div>
+</div>
+<div class="grid">
+  <div class="card ok"><h3>✅ Funciona</h3><ul><li>Con el móvil <b>bloqueado</b></li><li>Usando <b>otras apps</b> (WhatsApp, música, cámara)</li><li>Sin cobertura: guarda las posiciones y las <b>envía al volver la señal</b></li></ul></div>
+  <div class="card warn"><h3>⚠️ Necesitas</h3><ul><li>Un móvil Android o iPhone</li><li>Datos móviles activados</li><li>La app RideSafe IA con la beta activada</li></ul></div>
+</div>
+
+<h2 id="instalar"><span class="ico">🛠️</span>Instalar (solo la primera vez)</h2>
+
+<div class="card">
+  <h3><span class="n">1</span>Activa la beta en RideSafe IA</h3>
+  <p>Abre este enlace <b>en el móvil del ciclista</b>. Se abre RideSafe IA y verás el aviso «Beta activada».</p>
+  <p><span class="code">app.ridesafeia.es/?trkbeta=1</span></p>
+  <p>Solo hace falta una vez por móvil.</p>
+</div>
+
+<div class="card">
+  <h3><span class="n">2</span>Abre la tarjeta «Seguimiento con móvil bloqueado»</h3>
+  <p>En RideSafe IA, debajo de <b>«Ubicación para la familia»</b>, toca la tarjeta <b>🛰️ Seguimiento con móvil bloqueado · BETA</b>.</p>
+  <div class="flow"><span>Pro: pestaña Comunidad</span><span>Simple: pestaña Inicio</span></div>
+  <p>Se abre tu <b>tarjeta personal</b>, con tu nombre y tu código ya puestos. Guárdala en <b>favoritos</b>: la usarás en cada salida.</p>
+</div>
+
+<div class="card">
+  <h3><span class="n">3</span>Instala Traccar Client</h3>
+  <p>En la tarjeta, toca <b>▶ Android</b> o <b>iPhone</b> e instala la app. Si ya la tenías, pulsa <b>Actualizar</b>.</p>
+  <p><b>No la configures a mano.</b> Vuelve a la tarjeta.</p>
+</div>
+
+<div class="card">
+  <h3><span class="n">4</span>Configúrala con un toque</h3>
+  <p>En la tarjeta, toca <b>⚙️ Configurar automáticamente</b>. Se abre Traccar y pregunta <b>«¿Aplicar la nueva configuración?»</b>. Pulsa <b>Aceptar</b>.</p>
+  <p>Queda todo puesto solo:</p>
+  <table>
+    <tr><td>Identificador</td><td>tu código personal (empieza por <b>rs</b>)</td></tr>
+    <tr><td>URL del servidor</td><td>el servidor de RideSafe IA</td></tr>
+    <tr><td>Precisión</td><td>Alta</td></tr>
+    <tr><td>Distancia</td><td>20 metros</td></tr>
+    <tr><td>Intervalo</td><td>60 segundos</td></tr>
+  </table>
+</div>
+
+<h2 id="permisos"><span class="ico">🔐</span>Permisos (muy importante)</h2>
+<div class="card warn">
+  <p>Sin estos permisos, el teléfono para Traccar al bloquear la pantalla. Hazlos todos.</p>
+</div>
+<div class="card">
+  <h3><span class="n">5</span>Ubicación: «Permitir todo el tiempo»</h3>
+  <div class="path">Ajustes → Aplicaciones → Traccar Client → Permisos → Ubicación → <b>Permitir todo el tiempo</b></div>
+  <p>En iPhone: Ajustes → Traccar Client → Ubicación → <b>Siempre</b>, y <b>Ubicación exacta</b> activada.</p>
+</div>
+<div class="card">
+  <h3><span class="n">6</span>Batería: sin restricciones</h3>
+  <div class="path">Ajustes → Aplicaciones → Traccar Client → Batería → <b>No restringido</b></div>
+</div>
+<div class="card">
+  <h3><span class="n">7</span>Notificaciones: permitir</h3>
+  <p>Traccar muestra una notificación fija mientras te sigue. Es normal y es lo que impide que el móvil la cierre.</p>
+</div>
+
+<h2 id="marcas"><span class="ico">📱</span>Ajustes según la marca</h2>
+<div class="grid">
+  <div class="card">
+    <div class="brand">Samsung (Galaxy A, S…)</div>
+    <ul>
+      <li>Traccar Client → <b>«Administrar app si no se usa» → desactivado</b></li>
+      <li>Ajustes → Batería → Límites de uso en segundo plano → <b>Apps que nunca se suspenden</b> → añade Traccar Client</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="brand">Xiaomi · Redmi · POCO</div>
+    <ul>
+      <li>Traccar Client → <b>Inicio automático → activado</b></li>
+      <li>Ahorro de batería → <b>Sin restricciones</b></li>
+      <li>En <b>apps recientes</b>, mantén pulsada la tarjeta de Traccar → <b>🔒 Bloquear</b></li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="brand">Huawei · Honor</div>
+    <ul><li>Batería → Inicio de aplicaciones → Traccar Client → <b>Gestionar manualmente</b> y activa las 3 opciones</li></ul>
+  </div>
+  <div class="card">
+    <div class="brand">iPhone</div>
+    <ul><li>Ubicación <b>Siempre</b></li><li>Ajustes → General → <b>Actualización en segundo plano</b> activada para Traccar</li><li>No cierres Traccar deslizándola hacia arriba</li></ul>
+  </div>
+</div>
+
+<h2 id="salida"><span class="ico">🚴</span>En cada salida</h2>
+<div class="card">
+  <h3><span class="n">1</span>Empezar</h3>
+  <p>Abre tu tarjeta (desde favoritos o desde la tarjeta beta de RideSafe IA) y toca <b>▶️ Empezar</b>. También puedes activar <b>«Seguimiento continuo»</b> dentro de Traccar.</p>
+</div>
+<div class="card">
+  <h3><span class="n">2</span>Comprobar</h3>
+  <p>Espera un minuto y toca <b>🔎 Comprobar que llega</b>. Tiene que salir <b>✅ ¡Llega!</b></p>
+</div>
+<div class="card">
+  <h3><span class="n">3</span>Avisar a la familia</h3>
+  <p>Toca <b>💬 Enviar por WhatsApp</b>. Tu familia abre el enlace y te ve en el mapa en directo, con la línea del recorrido. No tienen que instalar nada.</p>
+</div>
+<div class="card">
+  <h3><span class="n">4</span>Bloquea y a rodar</h3>
+  <p>Bloquea el móvil y guárdalo. Traccar sigue enviando tu posición.</p>
+</div>
+<div class="card">
+  <h3><span class="n">5</span>Al terminar: Parar</h3>
+  <p>En tu tarjeta toca <b>⏹ Parar</b> o desactiva «Seguimiento continuo» en Traccar. Así no gastas batería y tu familia deja de verte.</p>
+</div>
+<div class="card note">
+  <p>🔋 <b>Batería:</b> el gasto depende del móvil. Mira cuánto baja en tu primera salida y, en salidas largas, lleva una batería externa.</p>
+  <p>🔒 <b>Privacidad:</b> tus posiciones se borran solas a los 2 días. Solo te ve quien tiene tu enlace.</p>
+</div>
+
+<h2 id="problemas"><span class="ico">🧰</span>Si algo no va</h2>
+<div class="card">
+  <h3>«Aún no llega» al comprobar</h3>
+  <ul><li>¿Está activado el <b>GPS</b> del móvil?</li><li>Dentro de casa el GPS tarda: acércate a una ventana o sal a la calle.</li><li>En Traccar, pulsa <b>«Enviar ubicación»</b> y vuelve a comprobar.</li></ul>
+</div>
+<div class="card">
+  <h3>El punto se queda quieto durante la ruta</h3>
+  <ul><li><b>Sin cobertura:</b> es normal. Al volver la señal, Traccar envía las posiciones guardadas.</li><li>Si no se recupera con señal, revisa los <b>permisos</b> y los <b>ajustes de tu marca</b>.</li></ul>
+</div>
+<div class="card">
+  <h3>Ver qué está pasando: «Mostrar estado»</h3>
+  <p>En Traccar Client, toca <b>«Mostrar estado»</b>. Verás una lista con la hora de cada envío:</p>
+  <table>
+    <tr><td>Upload response 200</td><td>✅ Llega bien</td></tr>
+    <tr><td>Position fetched</td><td>✅ Tiene GPS</td></tr>
+    <tr><td>Upload failed / sin internet</td><td>⚠️ Sin cobertura; reenvía después</td></tr>
+    <tr><td>Upload response 500</td><td>❌ Error del servidor: avisa a soporte</td></tr>
+  </table>
+  <p>Haz una captura y envíala a soporte.</p>
+</div>
+<div class="card note">
+  <h3>💬 Soporte</h3>
+  <p>Escríbenos a <a href="mailto:info@ridesafeia.es">info@ridesafeia.es</a> con una captura de «Mostrar estado».</p>
+</div>
+
+<footer>RideSafe IA · JM Prestige AI Solutions · Lleida<br>Traccar Client es una app gratuita de terceros (traccar.org).</footer>
+</div>
+</body>
+</html>
